@@ -27,6 +27,7 @@
 
   {%- render 'font-face' -%}
   {{ 'theme.css' | asset_url | stylesheet_tag: preload: true }}
+  {{ 'custom.css' | asset_url | stylesheet_tag: preload: true }}
   {%- render 'css-variables' -%}
 
   <script>
@@ -65,8 +66,8 @@
       predictiveSearch: {{ settings.predictive_search_enabled }},
       predictiveSearchType: {{ settings.search_type | json }},
       quickView: {{ settings.quick_shop_enable }},
-      themeName: 'Motion',
-      themeVersion: "10.3.1"
+      themeName: 'Maizon Store',
+      themeVersion: "1.0.0"
     };
   </script>
 

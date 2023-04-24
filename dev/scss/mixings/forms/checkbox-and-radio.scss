@@ -1,0 +1,147 @@
+%forminput-checkbox {
+	outline: none !important;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	width: 20px;
+	height: 20px;
+	padding: 3px 10px;
+	line-height: 1;
+	font-family: $main-font;
+	font-style: normal;
+	font-weight: bold;
+	font-size: .75rem;
+	margin: 0 10px 0 0;
+	border: 1px solid $base-white !important;
+	color: $base-white !important;
+	background: transparent !important;
+	display: inline;
+	@include border-radius(0px, 0px, 0px, 0px !important);
+	outline: none !important;
+	@include transition(all .3s ease);
+	* {
+		color: $base-white;	
+	}
+	@include screen(small) {
+		padding: 4px !important;
+	}
+	&:hover {
+		cursor: pointer;
+	}
+	&:checked {
+		position: relative;
+		border: 1px solid $base-white !important;
+		&:after, &::after {
+			content: '✓';
+			position: absolute;
+			@include transform(-50%, -50%);
+			top: 50%;
+			left: 50%;
+		}
+	}
+	}
+	
+	%forminput-checkbox-radio-mix {
+	outline: none !important;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	width: 20px;
+	height: 20px;
+	padding: 10px;
+	line-height: 1;
+	font-family: $main-font;
+	font-style: normal;
+	font-weight: bold;
+	font-size: .75rem;
+	margin: 0 10px 0 0;
+	border: 1px solid $base-white !important;
+	color: $base-white !important;
+	background: transparent !important;
+	@include border-radius(100px, 100px, 100px, 100px !important);
+	outline: none !important;
+	@include transition(all .3s ease);
+	* {
+		color: $base-white;	
+	}
+	@include screen(small) {
+		padding: 4px !important;
+	}
+	&:hover {
+		cursor: pointer;
+	}
+	&:checked {
+		position: relative;
+		border: 1px solid $base-white !important;
+		background: $base-white !important;
+		&:after, &::after {
+			content: '✓';
+			color: $base-white !important;
+			position: absolute;
+			@include transform(-50%, -50%);
+			top: 50%;
+			left: 50%;
+		}
+	}
+	}
+	
+	
+%forminput-radio {
+	outline: none !important;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	width: auto;
+	height: auto;
+	display: inline-block;
+	padding: 8px;
+	line-height: 1;
+	font-family: $main-font;
+	font-style: normal;
+	font-weight: bold;
+	font-size: .75rem;
+	margin: 0 10px 0 0;
+	border: 1px solid $base-black !important;
+	color: $base-black !important;
+	background: transparent !important;
+	@include border-radius(50px, 50px, 50px, 50px);
+	outline: none !important;
+	@include transition(all .3s ease);
+	&:hover {
+		border: 1px solid var(--color-main) !important;
+		cursor: pointer !important;
+	}
+	@include screen(small) {
+		padding: 15px !important;
+	}
+}
+	
+%forminput-radio-checked {
+	outline: none !important;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	width: auto;
+	height: auto;
+	display: inline-block;
+	padding: 8px;
+	line-height: 1;
+	font-family: $main-font;
+	font-style: normal;
+	font-weight: bold;
+	font-size: .75rem;
+	margin: 0 10px 0 0;
+	border: 1px solid var(--color-main) !important;
+	color: var(--color-main) !important;
+	background: var(--color-main) !important;
+	@include border-radius(50px, 50px, 50px, 50px);
+	outline: none !important;
+	@include transition(all .3s ease);
+	&:hover {
+		border: 1px solid $sub-color !important;
+		cursor: pointer !important;
+	}
+	@include screen(small) {
+		padding: 15px !important;
+	}
+}

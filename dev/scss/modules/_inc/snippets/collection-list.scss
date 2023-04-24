@@ -1,0 +1,47 @@
+.CollectionList {
+	.CollectionItem {
+		.CollectionItem__Wrapper {
+			.CollectionItem__ImageWrapper {
+				@include transition(all .75s ease);
+				* {
+					@include transition(all .75s ease);
+					-webkit-filter: blur(0px);
+					  -moz-filter: blur(0px);
+					  -o-filter: blur(0px);
+					  -ms-filter: blur(0px);
+					  filter: blur(0px);
+				}
+				
+			}
+			.CollectionItem__Content {
+				@include opacity(0);
+				@include transition(all .75s ease);
+				h2 {
+					display: none !important;
+				}
+			}
+		}
+		&:hover {
+			.CollectionItem__Content {
+				opacity: 1 !important;
+				filter: alpha(100) !important; //IE8
+			}
+			.CollectionItem__ImageWrapper {
+				* {
+					-webkit-filter: blur(50px);
+					  -moz-filter: blur(50px);
+					  -o-filter: blur(50px);
+					  -ms-filter: blur(50px);
+					  filter: blur(50px);
+					  @include screen(med) {
+					  -webkit-filter: blur(0px);
+						-moz-filter: blur(0px);
+						-o-filter: blur(0px);
+						-ms-filter: blur(0px);
+						filter: blur(0px);
+					} 
+				}
+			}
+		}
+	}
+}

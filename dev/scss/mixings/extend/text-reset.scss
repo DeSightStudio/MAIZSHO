@@ -1,0 +1,23 @@
+%font-reset {
+	font-family: $main-font !important;
+	font-size: $font-size-large !important;
+	line-height: 1.5 !important;
+	letter-spacing: normal;
+	text-transform: none;
+	@include screen(small) {
+		font-size: $font-size-medium !important;
+		line-height: 1.75 !important;
+	}
+	@include screen(x-small) {
+		font-size: $font-size-small !important;
+		line-height: 1.5 !important;
+	}
+}
+
+/* ============================================ */
+/* :::::::::::::::: USAGE OF CODE ::::::::::::: */
+/* ============================================ */
+	
+p.targetElement { 
+	@extend %font-reset;
+}

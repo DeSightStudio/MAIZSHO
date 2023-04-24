@@ -1,0 +1,14 @@
+.ProductForm__Variants {
+	display: flex;
+	flex-wrap: wrap;
+	.ProductForm__Option {
+		margin: $margin-none $margin-medium $margin-none $margin-none;
+		.SizeSwatchList {
+			li {
+				label {
+					padding: $padding-small;
+				}
+			}
+		}
+	}
+}

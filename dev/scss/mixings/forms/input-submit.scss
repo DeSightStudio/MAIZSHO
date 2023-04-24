@@ -1,0 +1,32 @@
+%form-submit_default {
+	background: rgb(252,163,17);
+	background: -moz-linear-gradient(45deg, rgba(252,163,17,1) 0%, rgba(247,127,0,1) 100%);
+	background: -webkit-linear-gradient(45deg, rgba(252,163,17,1) 0%, rgba(247,127,0,1) 100%);
+	background: linear-gradient(45deg, rgba(252,163,17,1) 0%, rgba(247,127,0,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fca311",endColorstr="#f77f00",GradientType=1); 
+	@include border-radius(100px, 100px, 100px, 100px);
+	padding: $padding-small $padding-medium;
+	margin: $margin-small $margin-none $margin-none $margin-none;
+	color: $base-white;
+	display: inline-block;
+	width: auto;
+	font-size: $font-size-large !important;
+	@include transition(all .3s ease);
+	border: 0px !important;
+	&:hover {
+		background: rgb(247,127,0);
+		background: -moz-linear-gradient(45deg, rgba(247,127,0,1) 0%, rgba(252,163,17,1) 100%);
+		background: -webkit-linear-gradient(45deg, rgba(247,127,0,1) 0%, rgba(252,163,17,1) 100%);
+		background: linear-gradient(45deg, rgba(247,127,0,1) 0%, rgba(252,163,17,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f77f00",endColorstr="#fca311",GradientType=1); 
+		cursor: pointer !important;
+	}
+}
+
+/* ============================================ */
+/* :::::::::::::::: USAGE OF CODE ::::::::::::: */
+/* ============================================ */
+	
+p.targetElement { 
+	@extend %form-submit_default;
+}

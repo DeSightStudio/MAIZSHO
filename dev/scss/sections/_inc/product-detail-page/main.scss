@@ -1,0 +1,12 @@
+#shopify-section-product-template {
+	background-color: #fafafa;
+	.Product {
+		.Product__Wrapper {
+			@import 'snippets/product-gallery';
+			@import 'snippets/product-description';
+			@import 'snippets/product-form_variants';
+		}
+	}
+	@import 'snippets/product-reviews';
+}
+@import 'snippets/mod-stickybar-cart';

@@ -1,0 +1,19 @@
+%form-label_default {
+	font-size: $font-size-small;
+	font-weight: $font-bold;
+	color: $base-black;
+	text-transform: none;
+	margin: $margin-medium $margin-none $margin-small $margin-none !important;
+	letter-spacing: normal;
+	display: block !important;
+	font-family: $main-font !important;
+	text-transform: uppercase;
+}
+
+/* ============================================ */
+/* :::::::::::::::: USAGE OF CODE ::::::::::::: */
+/* ============================================ */
+	
+p.targetElement { 
+	@extend %form-label_default;
+}

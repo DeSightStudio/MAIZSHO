@@ -1,0 +1,14 @@
+@mixin margin($top, $right, $bottom, $left) {
+  margin-top: $top !important;
+  margin-right: $right !important;
+  margin-bottom: $bottom !important;
+  margin-left: $left !important;
+}
+
+/* ============================================ */
+/* :::::::::::::::: USAGE OF CODE ::::::::::::: */
+/* ============================================ */
+	
+p.targetElement { 
+	@include margin(1px, 2px, 3px, 4px);
+}

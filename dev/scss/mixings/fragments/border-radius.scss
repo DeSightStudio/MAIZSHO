@@ -1,0 +1,15 @@
+@mixin border-radius($topLeft, $topRight, $bottomRight, $bottomLeft) {
+    -webkit-border-radius: $topLeft $topRight $bottomRight $bottomLeft !important;
+    -moz-border-radius: $topLeft $topRight $bottomRight $bottomLeft !important;
+    -ms-border-radius: $topLeft $topRight $bottomRight $bottomLeft !important;
+    -o-border-radius: $topLeft $topRight $bottomRight $bottomLeft !important;
+    border-radius: $topLeft $topRight $bottomRight $bottomLeft !important;
+}
+
+/* ============================================ */
+/* :::::::::::::::: USAGE OF CODE ::::::::::::: */
+/* ============================================ */
+	
+p.targetElement { 
+	@include border-radius(6px, 4px, 4px, 6px);
+}

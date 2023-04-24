@@ -1,0 +1,15 @@
+@mixin transform($args...) {
+  -webkit-transform: translate($args) !important;
+  -moz-transform: translate($args) !important;
+  -ms-transform: translate($args) !important;
+  -o-transform: translate($args) !important;
+  transform: translate($args) !important;
+}
+
+/* ============================================ */
+/* :::::::::::::::: USAGE OF CODE ::::::::::::: */
+/* ============================================ */
+	
+p.targetElement { 
+	@include transform(0%, -50%);
+}

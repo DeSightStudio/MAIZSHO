@@ -1,0 +1,40 @@
+%btn {
+	padding: $padding-medium $padding-large !important;
+	background-color: $main-color !important;
+	color: $base-white !important;
+	font-family: $sub-font;
+	font-weight: $font-bold;
+	font-size: $font-size-large;
+	letter-spacing: unset;
+	border: 0px !important;
+	@include border-radius(8px, 8px, 8px, 8px);
+	@include box-shadow(0, 13px, 43px, rgba(37, 46, 89, .05));
+	@include transition(all .3s ease);
+	&:hover {
+		background: $sub-color !important;
+		color: $base-white !important;
+	}
+	&:before, &::before, &:after, &::after {
+		display: none !important;
+	}
+	@include screen(med) {
+		font-size: $font-size-medium !important;
+		padding: $padding-small $padding-medium !important;
+	}
+}
+
+.btn, .button {
+	@extend %btn;
+}
+
+.shopify-payment-button__button {
+	display: none !important;
+}
+
+.additional-checkout-buttons {
+	display: none !important;
+}
+
+.shopify-payment-button__more-options {
+	display: none !important;
+}

@@ -1,0 +1,15 @@
+@mixin scale($factor) {
+	zoom: $factor; /* IE */
+	-moz-transform: scale($factor); /* Firefox */
+	-o-transform: scale($factor); /* Opera */
+	-webkit-transform: scale($factor); /* Safari And Chrome */
+	transform: scale($factor); /* Standard Property */
+}
+
+/* ============================================ */
+/* :::::::::::::::: USAGE OF CODE ::::::::::::: */
+/* ============================================ */
+	
+p.targetElement { 
+	@include scale(2);
+}

@@ -1,0 +1,56 @@
+#shopify-section-slideshow {
+	#section-slideshow {
+		padding: $padding-none $padding-none $padding-none $padding-none;
+		/*&:after, &::after {
+			position: absolute;
+			background: url("https://cdn.shopify.com/s/files/1/0540/7630/9697/files/slideshow_divider.png?v=1671751973") bottom center no-repeat transparent;
+			z-index: 3;
+			bottom: 0px;
+			left: 0px;
+			display: block;
+			height: 110px;
+			width: 100%;
+			content: ' ';
+		}*/
+		.Slideshow__Content {
+			padding: $padding-large*2;
+			@include screen(med) {
+				background: transparent !important;
+				padding: $padding-small !important;
+				top: 120px !important;
+				bottom: auto !important;
+			}
+			.Slideshow__Content__Inner {
+				display: inline-block;
+				background-color: rgba(255,255,255,0.5);
+				padding: $padding-large*2;
+				@include border-radius(10px, 10px, 10px, 10px);
+				@include screen(med) {
+					background: transparent !important;
+					padding: $padding-small !important;
+				}
+				h2 {
+					@include screen(med) {
+						font-size: 1.25em !important;
+					}
+				}
+				h3 {
+					@include screen(med) {
+						font-size: 1em !important;
+					}
+				}
+				.SectionHeader__ButtonWrapper {
+					a {
+						@include screen(med) {
+							font-size: .7em !important;
+							line-height: 1.25 !important;
+						}
+					}
+				}
+			}
+		}
+		.flickity-page-dots {
+			display: none !important;
+		}
+	}
+}

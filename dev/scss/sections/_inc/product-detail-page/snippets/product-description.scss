@@ -1,0 +1,30 @@
+.Product__InfoWrapper {
+	margin-top: 0px !important;
+	padding-top: 80px !important;
+	.ProductMeta {
+		.ProductMeta__Vendor {
+			margin: $margin-none $margin-none $margin-small/2 $margin-none;
+			font-size: 1rem;
+		}
+		.ProductMeta__Title {
+			font-size: 1.75rem;
+			margin-bottom: $margin-small;
+			padding-bottom: $padding-small;
+			border-bottom: 1px solid $base-grey-light;
+			letter-spacing: .15em;
+		}
+		.ProductMeta__PriceList {
+			display: inline-block;
+			letter-spacing: .15em;
+			.ProductMeta__Price {
+				font-size: 2rem;
+				font-family: $main-font;
+			}
+		}
+		.ProductMeta__TaxNotice {
+			display: inline-block;
+			font-size: .8rem;
+			color: $base-grey;
+		}
+	}
+}
