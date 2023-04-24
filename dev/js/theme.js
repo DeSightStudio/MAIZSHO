@@ -1,4 +1,4 @@
-/*
+ /*
 @license
   Motion by Archetype Themes (https://archetypethemes.co)
   Access unminified JS in assets/theme.js

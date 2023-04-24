@@ -16,7 +16,7 @@ jQuery(document).ready(function() {
 		  
 		  setTimeout(function(){  
 			  
-			  jQuery('.open-pop-up').magnificPopup({
+			  /*jQuery('.open-pop-up').magnificPopup({
 				  type:'inline',
 				  removalDelay: 500, //delay removal by X to allow out-animation
 				  callbacks: {
@@ -24,7 +24,7 @@ jQuery(document).ready(function() {
 						  this.st.mainClass = this.st.el.attr('data-effect');
 					  }
 				  }
-			  });
+			  });*/
 		  
 		  }, 100);
 		
