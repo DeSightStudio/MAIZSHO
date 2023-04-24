@@ -1,4 +1,4 @@
-%btn {
+/*%btn {
 	padding: $padding-medium $padding-large !important;
 	background-color: $main-color !important;
 	color: $base-white !important;
@@ -25,7 +25,7 @@
 
 .btn, .button {
 	@extend %btn;
-}
+}*/
 
 .shopify-payment-button__button {
 	display: none !important;
