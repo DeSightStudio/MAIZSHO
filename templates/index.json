@@ -1,5 +1,36 @@
 {
   "sections": {
+    "7f91dd29-3d2d-4514-9609-e2c3fc189721": {
+      "type": "slideshow",
+      "blocks": {
+        "template--18755799744787__7f91dd29-3d2d-4514-9609-e2c3fc189721-16824072548fa1750d-0": {
+          "type": "image",
+          "settings": {
+            "title": "NEW IN",
+            "title_size": 40,
+            "subheading": "Lorem ipsum dolor sit amet",
+            "link": "",
+            "link_text": "DISCOVER NEW IN",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify:\/\/shop_images\/placeholder_slideshow.jpg",
+            "parallax_direction": "top",
+            "overlay_opacity": 20
+          }
+        }
+      },
+      "block_order": [
+        "template--18755799744787__7f91dd29-3d2d-4514-9609-e2c3fc189721-16824072548fa1750d-0"
+      ],
+      "settings": {
+        "section_height": "650px",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "arrows",
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "lazyload_images": true
+      }
+    },
     "featured-collections": {
       "type": "featured-collections",
       "blocks": {
@@ -68,6 +99,7 @@
     }
   },
   "order": [
+    "7f91dd29-3d2d-4514-9609-e2c3fc189721",
     "featured-collections"
   ]
 }
