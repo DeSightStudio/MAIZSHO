@@ -11,6 +11,9 @@
         "product_grid": {
           "type": "product_grid",
           "settings": {
+            "collection_subnav_style": "inline",
+            "per_row": 3,
+            "mobile_flush_grid": true
           }
         }
       },
@@ -19,6 +22,14 @@
         "product_grid"
       ],
       "settings": {
+        "collection_image_enable": true,
+        "collection_image_height": 550,
+        "parallax": true,
+        "parallax_direction": "top",
+        "enable_sidebar": true,
+        "collapsed": true,
+        "enable_color_swatches": false,
+        "enable_sort": false
       }
     }
   },
