@@ -1,26 +1,24 @@
-#shopify-section-header {
-	#Search {
-		// TODO: Import
-	}
-	#section-header {
-		.Header__Wrapper {
-			.Header__FlexItem {
-				&.Header__FlexItem--logo {
-					padding: $padding-medium $padding-none;
-					.Header__Logo {
-						.Header__LogoLink {
-							img {
-								@include screen(med) {
-									max-width: 150px;
-								}
+#HeaderWrapper {
+	#SiteHeader {
+		.page-width {
+			max-width: 100%;
+			padding: $padding-none $padding-large;
+		}
+		.header-layout {
+			.header-item {
+				.site-nav {
+					.site-nav__item {
+						a {
+							padding: $padding-medium $padding-small*1.2;
+							text-transform: uppercase;
+							font-size: $font-size-large;
+							border-bottom: 2px solid $base-white;
+							border-width: 1%;
+							@include transition(all .3s ease);
+							&:hover {
+								border-bottom: 2px solid $base-black;
+								border-width: 100%;
 							}
-						}
-					}
-				}
-				.Header__MainNav {
-					ul {
-						li {
-							margin: 0px 14px !important;
 						}
 					}
 				}
