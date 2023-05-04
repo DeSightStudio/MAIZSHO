@@ -22,7 +22,7 @@
         "product_grid"
       ],
       "settings": {
-        "collection_image_enable": true,
+        "collection_image_enable": false,
         "collection_image_height": 550,
         "parallax": true,
         "parallax_direction": "top",
