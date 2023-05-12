@@ -2,14 +2,6 @@
   <header class="section-header">
     <h1 class="section-header__title">
       {{ page.title | escape }}
-      {% assign seite = page.handle %}
-{% for referenz in site.pages %}
-     {% assign marke = referenz.metafields.gemischte_referenz.value %}
-    <p>Markenname: {{ marke.markenname }}</p>
-        <p>Markenbeschreibung: {{ marke.markenbeschreibung }}</p>
-        <!-- Weitere Felder der Marke ausgeben -->
-{% endfor %}
-er
     </h1>
   </header>
 
