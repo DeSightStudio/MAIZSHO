@@ -6,11 +6,7 @@
 {% for referenz in site.pages %}
   {% if referenz.metafields.gemischte_referenz.metafield_namespace == "marke" and referenz.metafields.gemischte_referenz.metafield_key == "marke" %}
     {% assign marke = referenz.metafields.gemischte_referenz.value %}
-    {% if marke.markenname %}
-      {% if referenz.handle == seite %}
-        <p>Markenname: {{ marke.markenname }}</p>
-      {% endif %}
-    {% endif %}
+    <p>Markenname: {{ marke }}</p>
   {% endif %}
 {% endfor %}
     </h1>
