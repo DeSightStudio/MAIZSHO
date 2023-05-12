@@ -4,17 +4,12 @@
       {{ page.title | escape }}
       {% assign seite = page.handle %}
 {% for referenz in site.pages %}
-  {% if referenz.metafields.gemischte_referenz.metafield_namespace == "marken" and referenz.metafields.gemischte_referenz.metafield_key == "marke" %}
-    {% assign marke = referenz.metafields.gemischte_referenz.value %}
-    {% if marke %}
-      {% if referenz.handle == seite %}
-        <p>Markenname: {{ marke.markenname }}</p>
+     {% assign marke = referenz.metafields.gemischte_referenz.value %}
+    <p>Markenname: {{ marke.markenname }}</p>
         <p>Markenbeschreibung: {{ marke.markenbeschreibung }}</p>
         <!-- Weitere Felder der Marke ausgeben -->
-      {% endif %}
-    {% endif %}
-  {% endif %}
 {% endfor %}
+er
     </h1>
   </header>
 
