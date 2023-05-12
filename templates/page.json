@@ -4,9 +4,41 @@
       "type": "main-page",
       "settings": {
       }
+    },
+    "9732797d-948f-4085-8e17-409b81e885f8": {
+      "type": "fading-images",
+      "blocks": {
+        "template--18755799286035__9732797d-948f-4085-8e17-409b81e885f8-1683904014e8d61144-0": {
+          "type": "image",
+          "settings": {
+            "image": "{{ page.metafields.custom.test.value.profilbanner.value }}",
+            "slide_title1": "{{ page.metafields.custom.test.value.markenname.value }}",
+            "slide_title2": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--18755799286035__9732797d-948f-4085-8e17-409b81e885f8-1683904014e8d61144-0"
+      ],
+      "settings": {
+        "title_lines": "2",
+        "title_font": "body",
+        "title_size": 45,
+        "title_color": "#ffffff",
+        "title_bg_color": "rgba(0,0,0,0)",
+        "text_align": "vertical-center horizontal-center",
+        "link": "",
+        "slide_speed": 5,
+        "color_overlay": "#000",
+        "color_overlay_opacity": 30,
+        "desktop_height": "650px",
+        "mobile_height": "auto",
+        "lazyload_images": true
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "9732797d-948f-4085-8e17-409b81e885f8"
   ]
 }
