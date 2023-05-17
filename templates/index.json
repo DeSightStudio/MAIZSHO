@@ -149,7 +149,7 @@
         "template--18755799744787__9ff993d8-c9fb-4a75-ae14-016da587b5ac-1684322529ea54a972-1": {
           "type": "liquid",
           "settings": {
-            "code": "{%- render 'brands-overview' -%}",
+            "code": "{%- render 'brands-overview-home' -%}",
             "width": "100%",
             "alignment": "center"
           }
