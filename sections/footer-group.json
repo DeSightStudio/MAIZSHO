@@ -61,7 +61,7 @@
           "type": "logo_social",
           "settings": {
             "logo": "shopify:\/\/shop_images\/logo_maizon_black_png_800px.png",
-            "desktop_logo_height": 100,
+            "desktop_logo_height": 60,
             "container_width": 25
           }
         },
