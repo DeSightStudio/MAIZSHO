@@ -4,6 +4,7 @@
 	footer {
 		&.site-footer {
 		 	background-color: $base-white;
+			 padding: $padding-large*2 $padding-none;
 		 	.grid__item {
 			 	h1, h2, h3, h4, h5, h6 {
 				 	font-weight: $font-bold;
@@ -34,9 +35,58 @@
 						 }
 					 }
 				 }
+				 button.footer__title {
+					 font-weight: $font-light;
+					  font-size: $font-size-medium;
+					  color: $base-black;
+					  margin: $margin-none $margin-none $margin-small $margin-none;
+					  text-transform: none;
+					  letter-spacing: normal;
+					  * {
+						  color: $base-black;
+					  }
+				 }
 		 	}
 			 .site-footer__bottom {
 				 display: none;
+			 }
+			 .footer__newsletter {
+				 input {
+					 border: 1px solid $base-grey-light;
+					 padding: $padding-small $padding-small*5 $padding-small $padding-small;
+					 @include border-radius(6px, 6px, 6px, 6px);
+					 background-color: $base-white;
+					 color: $base-black;
+					 max-width: 100%;
+					 &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+						 color: $base-grey;
+					 }
+					 &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+						color: $base-grey;
+						opacity:  1;
+					 }
+					 &::-moz-placeholder { /* Mozilla Firefox 19+ */
+						color: $base-grey;
+						opacity:  1;
+					 }
+					 &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+						color: $base-grey;
+					 }
+					 &::-ms-input-placeholder { /* Microsoft Edge */
+						color: $base-grey;
+					 }
+					 
+					 ::placeholder { /* Most modern browsers support this now. */
+						color: $base-grey;
+					 }
+				 }
+				 button {
+					 top: 0;
+					 right: 0px;
+					 bottom: 0px;
+					 left: inherit;
+					 color: $base-black;
+				 }
 			 }
 		}
 	}
