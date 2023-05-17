@@ -163,6 +163,26 @@
         "space_around": true,
         "lazyload_images": true
       }
+    },
+    "5a6525f4-5829-4381-ac4a-3052943912f8": {
+      "type": "rich-text",
+      "blocks": {
+        "530b39a9-cbe4-49d4-83fa-d0a78d19e19d": {
+          "type": "button",
+          "settings": {
+            "link": "shopify:\/\/pages\/all-brands",
+            "link_text": "Discover all brands"
+          }
+        }
+      },
+      "block_order": [
+        "530b39a9-cbe4-49d4-83fa-d0a78d19e19d"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
     }
   },
   "order": [
@@ -170,6 +190,7 @@
     "a2f39142-2981-4dd8-b4ac-9e63ac08b8a6",
     "featured-collections",
     "b9947b1e-ae2d-48a0-9955-94479095d034",
-    "9ff993d8-c9fb-4a75-ae14-016da587b5ac"
+    "9ff993d8-c9fb-4a75-ae14-016da587b5ac",
+    "5a6525f4-5829-4381-ac4a-3052943912f8"
   ]
 }
