@@ -38,8 +38,8 @@
         "template--19043994140947__285b3c75-50ad-4e32-9b5f-7cf0f6c36677-1684328231cd9c9b85-1": {
           "type": "liquid",
           "settings": {
-            "code": "<h2>Custom content<\/h2><p>Use this advanced section to build your own layouts or to add custom HTML, Liquid, or scripts.<\/p>",
-            "width": "50%",
+            "code": "{%- render 'brands-overview' -%}",
+            "width": "100%",
             "alignment": "center"
           }
         }
