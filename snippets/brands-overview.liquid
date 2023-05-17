@@ -1,0 +1,20 @@
+<div id="brands__overview">
+	<div id="brands__overview--inner">
+		{% for brand in shop.metaobjects["marke"].values %}
+			<div class="brand__container">
+				<div class="brand__container--inner">
+					<a href="{{ shop.url }}/pages/{{ brand.system.handle }}">
+						<image-element>
+							<img src="{{ brand.hauptbild | image_url }}&amp;width=2400" alt="{{ brand.markenname }}" srcset="{{ brand.hauptbild | image_url }}&amp;width=352 352w, {{ brand.hauptbild | image_url }}&amp;width=832 832w, {{ brand.hauptbild | image_url }}&amp;width=1200 1200w, {{ brand.hauptbild | image_url }}&amp;width=1920 1920w, {{ brand.hauptbild | image_url }}&amp;width=2400 2400w" width="2400" height="3055" loading="lazy" class="image-fit lazyloaded" sizes="(min-width: 769px) 25vw, 50vw">
+						</image-element>
+						<div class="brand__title">
+							<h3>
+								{{ brand.markenname }}
+							</h3>
+						</div>
+					</a>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+</div>
