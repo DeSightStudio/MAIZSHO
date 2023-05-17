@@ -1,0 +1,20 @@
+#HeaderWrapper {
+	#SiteHeader {
+		.site-nav {
+			.site-nav__item {
+				a {
+					padding: $padding-medium $padding-small*1.2;
+					text-transform: uppercase;
+					font-size: $font-size-medium;
+					border-bottom: 2px solid $base-white;
+					border-width: 1%;
+					@include transition(all .3s ease);
+					&:hover {
+						border-bottom: 2px solid $base-black;
+						border-width: 100%;
+					}
+				}
+			}
+		}
+	}
+}

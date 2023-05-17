@@ -1,22 +1,122 @@
 <div id="brand__container">
   <div id="brand__container--header">
-    {{ page.metafields.reference.brand.value.markenname.value }}
+    <img src="{{ page.metafields.reference.brand.value.profilbanner.value | image_url }}" alt="{{ page.metafields.reference.brand.value.markenname.value }}" id="brand__banner-image" />
+    <div id="brand__container--header-inner">
+      <h1>{{ page.metafields.reference.brand.value.markenname.value }}</h1>
+    </div>
   </div>
   <div class="page-width page-width--narrow page-content">
     <div id="brand__container--content">
-      
+      <div id="brand__logo-container">
+        <img src="{{ page.metafields.reference.brand.value.markenlogo.value | image_url }}" alt="{{ page.metafields.reference.brand.value.markenname.value }}" id="brand__logo-image" />
+      </div>
+      <div id="brand__description">
+        <h2>About us</h2>
+        <p>
+          {{ page.metafields.reference.brand.value.markenbeschreibung_geschichte.value }}
+        </p>
+      </div>
     </div>
     <div id="brand__container--products">
+      <h2>Products from {{ page.metafields.reference.brand.value.markenname.value }}</h2>
+      <div id="brand__container--products--inner">
       {% assign products = page.metafields.reference.brand.value.produkte_der_marke.value %}
       {%- for product in products -%}
-          <div>
-              {{ product.title}}
-          </div>
-          <br>
+        <div class="brand__product--container">
+          <a href="{{ product.url }}" title="{{ product.title }}" class="brand__product__url">
+            <div class="brand__product--container__image">
+              <img src="{{ product.featured_image | image_url }}" alt="{{ product.title }}" class="product__main-image" />
+            </div>
+            <div class="brand__product--container__headline">
+              <h3>
+                {{ product.title }}
+              </h3>
+            </div>
+            <div class="brand__product--container__price">
+              <p>
+                {{ product.price | money }}
+              </p>
+            </div>
+          </a>
+        </div>
       {%- endfor -%}
     </div>
     <div id="brand__container--footer">
-      
+      <div id="brand__footer--inner">
+       <!--<h4>Legal notice and information of the brand</h4>-->
+        <ul id="brand__legal-menu">
+          <li class="legal-menu__item"><a href="#imprint-pop-up" class="open-pop-up" data-effect="mfp-zoom-out">Imprint</a></li>
+          <li class="legal-menu__item"><a href="#privacy-pop-up" class="open-pop-up" data-effect="mfp-zoom-out">Privacy policy</a></li>
+          <li class="legal-menu__item"><a href="#toc-pop-up" class="open-pop-up" data-effect="mfp-zoom-out">Terms and conditions</a></li>
+          <li class="legal-menu__item"><a href="#shipping-pop-up" class="open-pop-up" data-effect="mfp-zoom-out">Shipping and payment</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="brand__pop-ups">
+  <div id="brand__imprint">
+    <div id="imprint-pop-up" class="pop-up white-popup mfp-hide">
+       <div class="imprint-pop-up inner">
+      <div class="imprint-pop-up headline-container">
+       <h5>Imprint</h5>
+      </div>
+      <div class="imprint-pop-up text-container">
+       {%- if page.metafields.reference.brand.value.marke-impressum.value != blank -%}
+        {{ page.metafields.reference.brand.value.marke-impressum.value }}
+       {%- else -%}
+       <p>Unfortunately, this information has not yet been filed by {{ page.metafields.reference.brand.value.markenname.value }}. If you have any questions or uncertainties, please contact us directly.</p>
+       {%- endif -%}
+      </div>
+       </div>
+    </div>
+  </div>
+  <div id="brand__privacy">
+    <div id="privacy-pop-up" class="pop-up white-popup mfp-hide">
+       <div class="privacy-pop-up inner">
+      <div class="privacy-pop-up headline-container">
+       <h5>Privacy Policy</h5>
+      </div>
+      <div class="privacy-pop-up text-container">
+       {%- if page.metafields.reference.brand.value.marke-datenschutz.value != blank -%}
+        {{ page.metafields.reference.brand.value.marke-datenschutz.value }}
+       {%- else -%}
+       <p>Unfortunately, this information has not yet been filed by {{ page.metafields.reference.brand.value.markenname.value }}. If you have any questions or uncertainties, please contact us directly.</p>
+       {%- endif -%}
+      </div>
+       </div>
+    </div>
+  </div>
+  <div id="brand__toc">
+    <div id="toc-pop-up" class="pop-up white-popup mfp-hide">
+       <div class="toc-pop-up inner">
+        <div class="toc-pop-up headline-container">
+         <h5>Terms and conditions</h5>
+        </div>
+        <div class="toc-pop-up text-container">
+         {%- if page.metafields.reference.brand.value.marke-agb.value != blank -%}
+          {{ page.metafields.reference.brand.value.marke-agb.value }}
+         {%- else -%}
+         <p>Unfortunately, this information has not yet been filed by {{ page.metafields.reference.brand.value.markenname.value }}. If you have any questions or uncertainties, please contact us directly.</p>
+         {%- endif -%}
+        </div>
+       </div>
+    </div>
+  </div>
+  <div id="brand__shipping">
+    <div id="shipping-pop-up" class="pop-up white-popup mfp-hide">
+       <div class="shipping-pop-up inner">
+          <div class="shipping-pop-up headline-container">
+             <h5>Shipping and payment</h5>
+          </div>
+          <div class="shipping-pop-up text-container">
+             {%- if page.metafields.reference.brand.value.marke-versand.value != blank -%}
+              {{ page.metafields.reference.brand.value.marke-versand.value }}
+             {%- else -%}
+             <p>Unfortunately, this information has not yet been filed by {{ page.metafields.reference.brand.value.markenname.value }}. If you have any questions or uncertainties, please contact us directly.</p>
+             {%- endif -%}
+          </div>
+       </div>
     </div>
   </div>
 </div>

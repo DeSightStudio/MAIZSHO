@@ -1,0 +1,191 @@
+#MainContent {
+	#brand__container {
+		display: block;
+		position: relative;
+		float: none;
+		clear: both;
+		width: 100%;
+		max-width: 100%;
+		margin: $margin-none;
+		padding: $padding-none;
+		#brand__container--header {
+			position: relative;
+			max-height: calc(100vh - 170px);
+			overflow: hidden;
+			&:before, &::before {
+				background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0) 30%, rgba(0, 0, 0, 0.62) 100%);
+				display: block;
+				position: absolute;
+				z-index: 9;
+				content: ' ';
+				width: 100%;
+				height: 100%;
+			}
+			img {
+				position: relative;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				z-index: 8;
+			}
+			#brand__container--header-inner {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				@include transform(-50%, -50%);
+				padding: $padding-medium/1.2;
+				border: 2px solid $base-white;
+				z-index: 10;
+				h1, h2, h3, h4, h5, h6 {
+					font-size: $h1-size;
+					text-transform: uppercase;
+					font-weight: $font-bold;
+					display: block;
+					margin: $margin-none;
+					color: $base-white;
+					@include screen(med) {
+						font-size: $font-size-large;
+					}
+				}
+			}
+		}
+		#brand__container--content {
+			#brand__logo-container {
+				display: block;
+				width: 100%;
+				padding: $padding-large;
+				margin: $margin-large $margin-none;
+				border-bottom: 1px solid $base-grey-light;
+				text-align: center;
+				img {
+					display: block;
+					margin: 0 auto;
+					text-align: center;
+					max-width: 400px;
+					width: 90%;
+				}
+			}
+			#brand__description {
+				text-align: center;
+				padding: $padding-small $padding-medium $padding-none $padding-medium;
+				margin: $margin-small $margin-none $margin-large $margin-none;
+				h1, h2, h3, h4, h5, h6 {
+					
+				}
+				p {
+					font-size: $font-size-large;
+					line-height: 1.6;
+				}
+			}
+		}
+		#brand__container--products {
+			text-align: center;
+			padding: $padding-small $padding-medium $padding-medium $padding-medium;
+			margin: $margin-small $margin-none $margin-large $margin-none;
+			#brand__container--products--inner {
+				display: flex;
+				flex: 1 1 100%;
+				flex-wrap: wrap;
+				.brand__product--container {
+					flex: 0 0 calc(33% - 10px);
+					margin: $margin-none $margin-small/2 $margin-small $margin-small/2;
+					position: relative;
+					border: 1px solid $base-grey-light;
+					padding: $padding-medium $padding-large;
+					@include screen(med) {
+						flex: 1 1 100%;
+						margin: $margin-none $margin-none $margin-small $margin-none;
+					}
+					a {
+						display: block;
+						cursor: pointer;
+						.brand__product--container__image {
+							display: flex;
+							flex: 1 1 100%;
+							flex-wrap: wrap;
+							min-height: 350px;
+							align-content: flex-end;
+							align-items: flex-end;
+							justify-content: flex-end;
+							justify-items: flex-end;
+						}
+						.brand__product--container__headline {
+							text-align: left;
+							display: block;
+							margin: $margin-medium $margin-none $margin-small $margin-none;
+							h1, h2, h3, h4, h5, h6 {
+								font-size: $h6-size;
+								text-transform: none;
+								text-align: left;
+								font-weight: $font-bold;
+								margin: $margin-none;
+							}
+						}
+						.brand__product--container__price {
+							text-align: left;
+							display: block;
+							margin: $margin-none $margin-none $margin-small $margin-none;
+							p {
+								font-size: $h6-size;
+								text-transform: none;
+								text-align: left;
+								font-weight: $font-light;
+								margin: $margin-none;
+							}
+						}
+					}
+				}
+			}
+		}
+		#brand__container--footer {
+			display: block;
+			width: 100%;
+			padding: $padding-large;
+			margin: $margin-large $margin-none $margin-none $margin-none;
+			border-top: 1px solid $base-grey-light;
+			h1, h2, h3, h4, h5, h6 {
+				font-size: $font-size-large;
+				text-transform: none;
+				text-align: center;
+				font-weight: $font-light;
+				margin: $margin-none $margin-none $margin-large $margin-none;
+				color: $base-grey;
+			}
+			ul {
+				margin: $margin-none;
+				padding: $padding-none;
+				text-align: center;
+				display: flex;
+				flex: 1 1 100%;
+				flex-wrap: wrap;
+				list-style: none;
+				list-style-type: none;
+				li {
+					flex: 0 0 25%;
+					list-style: none;
+					list-style-type: none;
+					border-right: 1px solid $base-grey-light;
+					@include screen(med) {
+						border: 0px !important;
+						flex: 1 1 100%;
+						text-align: center;
+						padding: $padding-small $padding-none;
+					}
+					a {
+						color: $base-grey;
+						@include screen(med) {
+							border: 0px !important;
+							display: block;
+							text-align: center;
+						}
+					}
+				}
+				li:last-child {
+					border-right: 0px solid transparent;
+				}
+			}
+		}
+	}
+}

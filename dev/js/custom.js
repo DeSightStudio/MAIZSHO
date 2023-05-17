@@ -48,7 +48,5 @@ ready(function() {
       });
 	}
   
-  jQuery('.ProductForm__Label:contains("Menge"), .ProductForm__QuantitySelector').wrapAll('<div class="wrapped" />');
-  
 });
 

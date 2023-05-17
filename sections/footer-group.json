@@ -62,7 +62,7 @@
           "settings": {
             "logo": "shopify:\/\/shop_images\/logo_maizon_black_png_800px.png",
             "desktop_logo_height": 60,
-            "container_width": 25
+            "container_width": 20
           }
         },
         "footer-1": {
@@ -70,7 +70,7 @@
           "settings": {
             "show_footer_title": true,
             "menu": "useful-information",
-            "container_width": 25
+            "container_width": 20
           }
         },
         "footer-3": {
@@ -78,7 +78,7 @@
           "settings": {
             "show_footer_title": true,
             "menu": "footer",
-            "container_width": 25
+            "container_width": 20
           }
         },
         "footer-2": {
@@ -87,7 +87,7 @@
             "show_footer_title": true,
             "title": "Never miss news again",
             "richtext": "<p>Stay up to date on new brands, products and collection from Maizon Store. Register for free for our newsletter (unsubscribe possible at any time).<\/p>",
-            "container_width": 25
+            "container_width": 40
           }
         }
       },

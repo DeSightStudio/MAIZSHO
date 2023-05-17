@@ -2,7 +2,21 @@
 	.medium-up--one-quarter {
 		width: 33%;
 		@include screen(med) {
-			width: 50%;
+			width: 100%;
+		}
+		.skrim__link {
+			.skrim__title {
+				padding: $padding-medium/1.2;
+				border: 2px solid $base-white;
+				width: calc(100% - 60px);
+				margin: $margin-none $margin-large $margin-large $margin-large;
+				.skrim__underline-me {
+					font-size: $font-size-large;
+					text-transform: uppercase;
+					font-weight: $font-bold;
+					display: block;
+				}
+			}
 		}
 	}
 }

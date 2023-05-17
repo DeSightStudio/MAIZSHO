@@ -2,17 +2,32 @@ jQuery(document).ready(function() {
 	
 	setTimeout(function(){ 
 	
-		/*jQuery(".page main.content-for-layout p:has(img)").addClass("paragraph__image-container");
-		jQuery(".page main.content-for-layout p:has(img)").closest('p').next().addClass("paragraph__image-container__after");
-		jQuery(".page main.content-for-layout p:has(img)").closest('p').next().closest('p').next().addClass("paragraph__image-container__after__clear");
-		
-		$(window).scroll(function(){
-			if ($(window).scrollTop() > 1700){
-			  $('._12n8yed').addClass('scroll');
-			} else {
-			  $('._12n8yed').removeClass('scroll');
-			}
-		  });*/
+		  
+		  jQuery('.ProductForm__Label:contains("Menge"), .ProductForm__QuantitySelector').wrapAll('<div class="wrapped" />');
+		  
+		  if (jQuery(".open-pop-up").length > 0){
+			jQuery('.open-pop-up').magnificPopup({
+			  type:'inline',
+			  midClick: true, // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+			  removalDelay: 500, //delay removal by X to allow out-animation
+			  callbacks: {
+			  beforeOpen: function() {
+				 this.st.mainClass = this.st.el.attr('data-effect');
+			  },
+			  open: function() {
+				/*if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+				screen.orientation.lock('landscape');
+				}*/
+				$.magnificPopup.instance.close = function() {
+				// Do whatever else you need to do here
+			
+				// Call the original close method to close the popup
+				$.magnificPopup.proto.close.call(this);
+				};
+			  }
+			  }
+			});
+		  }
 		  
 		  setTimeout(function(){  
 			  
