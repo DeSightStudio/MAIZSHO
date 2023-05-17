@@ -1,0 +1,43 @@
+.shopify-section-group-footer-group {
+	background: transparent;
+	@include box-shadow(0, 13px, 43px, rgba(37, 46, 89, .25));
+	footer {
+		&.site-footer {
+		 	background-color: $base-white;
+		 	.grid__item {
+			 	h1, h2, h3, h4, h5, h6 {
+				 	font-weight: $font-bold;
+				 	font-size: $font-size-medium;
+				 	color: $base-black;
+				 	margin: $margin-none $margin-none $margin-small $margin-none;
+				 	text-transform: none;
+					 letter-spacing: normal;
+			 	}
+				 p {
+					font-weight: $font-light;
+					 font-size: $font-size-medium;
+					 color: $base-black;
+					 margin: $margin-none $margin-none $margin-small $margin-none;
+					 text-transform: none;
+					 letter-spacing: normal;
+				 }
+				 ul {
+					 li {
+						 a {
+							 font-weight: $font-light;
+							  font-size: $font-size-medium;
+							  color: $base-black;
+							  margin: $margin-none $margin-none $margin-small $margin-none;
+							  text-transform: none;
+							  letter-spacing: normal;
+							  text-decoration: none;
+						 }
+					 }
+				 }
+		 	}
+			 .site-footer__bottom {
+				 display: none;
+			 }
+		}
+	}
+}

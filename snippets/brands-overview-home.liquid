@@ -1,9 +1,7 @@
 <div id="brands__overview">
 	<div id="brands__overview--inner">
 		{% for brand in shop.metaobjects["marke"].values %}
-			{% if template.name != "index" %} 
-				{% if forloop.index <= 3 %}
-			{% endif %}
+			{% if forloop.index <= 3 %}
 				<div class="brand__container">
 					<div class="brand__container--inner">
 						<a href="{{ shop.url }}/pages/{{ brand.system.handle }}">
@@ -18,8 +16,6 @@
 						</a>
 					</div>
 				</div>
-			{% if template.name != "index" %}
-				{% endif %}
 			{% endif %}
 		{% endfor %}
 	</div>
