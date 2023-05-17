@@ -57,12 +57,20 @@
     "footer": {
       "type": "footer",
       "blocks": {
+        "footer-0": {
+          "type": "logo_social",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/logo_maizon_black_png_800px.png",
+            "desktop_logo_height": 100,
+            "container_width": 25
+          }
+        },
         "footer-3": {
           "type": "menu",
           "settings": {
             "show_footer_title": true,
             "menu": "footer",
-            "container_width": 20
+            "container_width": 25
           }
         },
         "footer-1": {
@@ -70,36 +78,29 @@
           "settings": {
             "show_footer_title": true,
             "menu": "main-menu",
-            "container_width": 20
+            "container_width": 25
           }
         },
         "footer-2": {
           "type": "newsletter",
           "settings": {
             "show_footer_title": true,
-            "title": "Sign up and save",
-            "richtext": "<p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.<\/p>",
-            "container_width": 33
-          }
-        },
-        "footer-0": {
-          "type": "logo_social",
-          "settings": {
-            "desktop_logo_height": 50,
-            "container_width": 20
+            "title": "Never miss news again",
+            "richtext": "<p>Stay up to date on new brands, products and collection from Maizon Store. Register for free for our newsletter (unsubscribe possible at any time).<\/p>",
+            "container_width": 25
           }
         }
       },
       "block_order": [
+        "footer-0",
         "footer-3",
         "footer-1",
-        "footer-2",
-        "footer-0"
+        "footer-2"
       ],
       "settings": {
-        "show_locale_selector": true,
-        "show_currency_selector": true,
-        "show_currency_flags": true,
+        "show_locale_selector": false,
+        "show_currency_selector": false,
+        "show_currency_flags": false,
         "show_payment_icons": false,
         "colorize_payment_icons": false,
         "show_copyright": false,
