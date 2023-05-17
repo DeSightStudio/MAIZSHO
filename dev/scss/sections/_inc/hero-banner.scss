@@ -11,7 +11,33 @@
 							font-size: $h1-size;
 							color: $base-white;
 							font-weight: $font-bold;
-							margin: $margin-small $margin-none;
+							margin: $margin-none;
+							@include screen(med) {
+								font-size: $h3-size;
+							}
+						}
+						.hero__subtitle {
+							max-width: 75%;
+							margin: $margin-medium $margin-none;
+							@include screen(med) {
+								max-width: 100%;
+							}
+							* {
+								font-size: $h6-size;
+								text-transform: none;
+								line-height: 1.5em;
+								color: $base-white;
+								letter-spacing: normal;
+								@include screen(med) {
+									font-size: $font-size-large;
+								}
+							}
+						}
+						.hero__link {
+							float: none;
+							clear: both;
+							display: block;
+							width: 100%;
 						}
 					}
 				}

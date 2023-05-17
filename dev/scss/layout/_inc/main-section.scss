@@ -1,5 +1,10 @@
-.page-width {
-	max-width: 1300px;
-	padding: 0 2.5%;
-	width: 95%;
+#MainContent {
+	.page-width {
+		max-width: 1300px;
+		padding: 0 2.5%;
+		width: 95%;
+	}
+	.index-section {
+		margin: $margin-large*2 $margin-none;
+	}
 }

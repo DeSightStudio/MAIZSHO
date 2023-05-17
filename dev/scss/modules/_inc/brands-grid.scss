@@ -1,0 +1,60 @@
+#brands__overview {
+	display: block;
+	position: relative;
+	float: none;
+	clear: both;
+	width: 100%;
+	max-width: 100%;
+	margin: $margin-none;
+	padding: $padding-none;
+	#brands__overview--inner {
+		display: flex;
+		flex: 1 1 100%;
+		flex-wrap: wrap;
+		.brand__container {
+			flex: 0 0 calc(33% - 10px);
+			margin: $margin-none $margin-small/2 $margin-small $margin-small/2;
+			position: relative;
+			@include screen(med) {
+				flex: 1 1 100%;
+				margin: $margin-none $margin-none $margin-small $margin-none;
+			}
+			.brand__container--inner {
+				a {
+					display: block;
+					position: relative;
+					&:before, &::before {
+						background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0) 30%, rgba(0, 0, 0, 0.62) 100%);
+						display: block;
+						position: absolute;
+						z-index: 9;
+						content: ' ';
+						width: 100%;
+						height: 100%;
+					}
+					&:hover {
+						cursor: pointer;
+					}
+					.brand__title {
+						position: absolute;
+						padding: $padding-medium/1.2;
+						border: 2px solid $base-white;
+						bottom: 25px;
+						left: 25px;
+						z-index: 99;
+						display: block;
+						width: calc(100% - 45px);
+						h1, h2, h3, h4, h5, h6 {
+							font-size: $font-size-large;
+							text-transform: uppercase;
+							font-weight: $font-bold;
+							display: block;
+							margin: $margin-none;
+							color: $base-white;
+						}
+					}
+				}
+			}
+		}
+	}
+}
