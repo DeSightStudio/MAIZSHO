@@ -142,12 +142,34 @@
         "narrow_column": true,
         "divider": false
       }
+    },
+    "9ff993d8-c9fb-4a75-ae14-016da587b5ac": {
+      "type": "advanced-content",
+      "blocks": {
+        "template--18755799744787__9ff993d8-c9fb-4a75-ae14-016da587b5ac-1684322529ea54a972-1": {
+          "type": "liquid",
+          "settings": {
+            "code": "{%- render 'brands-overview' -%}",
+            "width": "100%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--18755799744787__9ff993d8-c9fb-4a75-ae14-016da587b5ac-1684322529ea54a972-1"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true,
+        "lazyload_images": true
+      }
     }
   },
   "order": [
     "7f91dd29-3d2d-4514-9609-e2c3fc189721",
     "a2f39142-2981-4dd8-b4ac-9e63ac08b8a6",
     "featured-collections",
-    "b9947b1e-ae2d-48a0-9955-94479095d034"
+    "b9947b1e-ae2d-48a0-9955-94479095d034",
+    "9ff993d8-c9fb-4a75-ae14-016da587b5ac"
   ]
 }
