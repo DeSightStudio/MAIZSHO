@@ -65,19 +65,19 @@
             "container_width": 25
           }
         },
+        "footer-1": {
+          "type": "menu",
+          "settings": {
+            "show_footer_title": true,
+            "menu": "useful-information",
+            "container_width": 25
+          }
+        },
         "footer-3": {
           "type": "menu",
           "settings": {
             "show_footer_title": true,
             "menu": "footer",
-            "container_width": 25
-          }
-        },
-        "footer-1": {
-          "type": "menu",
-          "settings": {
-            "show_footer_title": true,
-            "menu": "main-menu",
             "container_width": 25
           }
         },
@@ -93,8 +93,8 @@
       },
       "block_order": [
         "footer-0",
-        "footer-3",
         "footer-1",
+        "footer-3",
         "footer-2"
       ],
       "settings": {
