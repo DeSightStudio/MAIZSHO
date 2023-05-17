@@ -4,9 +4,59 @@
       "type": "main-brand",
       "settings": {
       }
+    },
+    "9b06eb47-129f-4d67-a8d8-f4f4695f0fb6": {
+      "type": "rich-text",
+      "blocks": {
+        "template--19043994140947__9b06eb47-129f-4d67-a8d8-f4f4695f0fb6-16843282410aa19804-0": {
+          "type": "heading",
+          "settings": {
+            "title": "All Brands"
+          }
+        },
+        "template--19043994140947__9b06eb47-129f-4d67-a8d8-f4f4695f0fb6-16843282410aa19804-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--19043994140947__9b06eb47-129f-4d67-a8d8-f4f4695f0fb6-16843282410aa19804-0",
+        "template--19043994140947__9b06eb47-129f-4d67-a8d8-f4f4695f0fb6-16843282410aa19804-1"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "285b3c75-50ad-4e32-9b5f-7cf0f6c36677": {
+      "type": "advanced-content",
+      "blocks": {
+        "template--19043994140947__285b3c75-50ad-4e32-9b5f-7cf0f6c36677-1684328231cd9c9b85-1": {
+          "type": "liquid",
+          "settings": {
+            "code": "<h2>Custom content<\/h2><p>Use this advanced section to build your own layouts or to add custom HTML, Liquid, or scripts.<\/p>",
+            "width": "50%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--19043994140947__285b3c75-50ad-4e32-9b5f-7cf0f6c36677-1684328231cd9c9b85-1"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true,
+        "lazyload_images": true
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "9b06eb47-129f-4d67-a8d8-f4f4695f0fb6",
+    "285b3c75-50ad-4e32-9b5f-7cf0f6c36677"
   ]
 }
