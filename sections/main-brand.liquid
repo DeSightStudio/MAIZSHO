@@ -1,15 +1,23 @@
 <div id="brand__container">
   <div id="brand__container--header">
-    {{ page.metafields.custom.test.value.markenname.value }}
+    {{ page.metafields.reference.brand.value.markenname.value }}
   </div>
-  <div id="brand__container--content">
-    
-  </div>
-  <div id="brand__container--products">
-    
-  </div>
-  <div id="brand__container--footer">
-    
+  <div class="page-width page-width--narrow page-content">
+    <div id="brand__container--content">
+      
+    </div>
+    <div id="brand__container--products">
+      {% assign products = page.metafields.reference.brand.value.produkte_der_marke.value %}
+      {%- for product in products -%}
+          <div>
+              {{ product.title}}
+          </div>
+          <br>
+      {%- endfor -%}
+    </div>
+    <div id="brand__container--footer">
+      
+    </div>
   </div>
 </div>
 {% schema %}
