@@ -1,0 +1,21 @@
+.shopify-section {
+	div[data-section-type="slideshow-section"] {
+		.slideshow-wrapper {
+			.hero {
+				.hero__image-wrapper {
+					
+				}
+				.hero__text-wrap {
+					.hero__text-content {
+						h1, h2, h3, h4, h5, h6 {
+							font-size: $h1-size;
+							color: $base-white;
+							font-weight: $font-bold;
+							margin: $margin-small $margin-none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
