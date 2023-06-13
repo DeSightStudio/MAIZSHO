@@ -5,6 +5,7 @@
 	background: linear-gradient(0deg, rgba(242,242,242,1) 0%, rgba(255,255,255,1) 80%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f2f2f2",endColorstr="#ffffff",GradientType=1);
 	padding: $padding-small/2 55px $padding-small/2 50px;
+	color: $base-black;
 	.announcement-bar-inner {
 		display: flex;
 		flex-wrap: wrap;
