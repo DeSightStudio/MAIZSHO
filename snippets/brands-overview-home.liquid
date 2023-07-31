@@ -1,6 +1,7 @@
 <div id="brands__overview">
 	<div id="brands__overview--inner">
-		{% for brand in shop.metaobjects["marke"].values %}
+		{% assign sortedBrands = shop.metaobjects["marke"].values | sort: "reihenfolge" %}
+		{% for brand in sortedBrands %}
 			{% if forloop.index <= 3 %}
 				<div class="brand__container">
 					<div class="brand__container--inner">

@@ -10,6 +10,11 @@
       <div id="brand__logo-container">
         <img src="{{ page.metafields.reference.brand.value.markenlogo.value | image_url }}" alt="{{ page.metafields.reference.brand.value.markenname.value }}" id="brand__logo-image" />
       </div>
+      {%- if page.metafields.reference.brand.value.mindestbestellwert.value != blank -%}
+      <div id="brand__container--order-value">
+        <h4>Minimum order value at {{ page.metafields.reference.brand.value.markenname.value }}: <span>{{ page.metafields.reference.brand.value.mindestbestellwert.value }}</span></h4>
+      </div>
+      {%- endif -%}
       <div id="brand__description">
         <h2>About us</h2>
         <p>
