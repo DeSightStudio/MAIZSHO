@@ -40,6 +40,7 @@
     "animate_underlines": false,
     "product_save_amount": true,
     "product_save_type": "percent",
+    "product_hover_image": false,
     "cart_type": "drawer",
     "cart_icon": "cart",
     "cart_notes_enable": true,
