@@ -4,7 +4,6 @@
   "sections": {
     "footer-promotions": {
       "type": "footer-promotions",
-      "disabled": true,
       "blocks": {
         "footer-promotions0": {
           "type": "promotion",
@@ -48,6 +47,7 @@
         "footer-promotions1",
         "footer-promotions2"
       ],
+      "disabled": true,
       "settings": {
         "hide_homepage": false,
         "image_size": "wide",
@@ -73,11 +73,12 @@
             "container_width": 20
           }
         },
-        "footer-3": {
-          "type": "menu",
+        "bbf128a4-3cb9-4285-b725-7c3f407857ba": {
+          "type": "custom",
           "settings": {
             "show_footer_title": true,
-            "menu": "footer",
+            "title": "About Maizon",
+            "text": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.<\/p>",
             "container_width": 20
           }
         },
@@ -94,7 +95,7 @@
       "block_order": [
         "footer-0",
         "footer-1",
-        "footer-3",
+        "bbf128a4-3cb9-4285-b725-7c3f407857ba",
         "footer-2"
       ],
       "settings": {
