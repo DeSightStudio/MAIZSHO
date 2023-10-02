@@ -27,12 +27,12 @@
 			position: relative;
 			width: 100%;
 			height: 0;
-			padding-bottom: 156.25%; /* Festlegen des Seitenverhältnisses (hier 1:1), z.B. 56.25% für 16:9 */
+			padding-bottom: 100%; /* Festlegen des Seitenverhältnisses (hier 1:1), z.B. 56.25% für 16:9 */
 			overflow: hidden;
 			display: block;
-			@include screen(med) {
+			/*@include screen(med) {
 				padding-bottom: 56.25%;
-			}
+			}*/
 		}
 	}
 }
