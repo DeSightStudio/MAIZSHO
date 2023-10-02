@@ -18,11 +18,11 @@
       <div id="brand__description">
         <h2>About us</h2>
         <p>
-          {{ page.metafields.reference.brand.value.markenbeschreibung_geschichte.value }}
+          {{ page.metafields.reference.brand.value.markenbeschreibung_geschichte.value | newline_to_br }}
         </p>
         {%- if page.metafields.reference.brand.value.weiterfuhrende_informationen_pdf.value != blank -%}
         <div class="brand__description__pdf">
-          <a class="btn" href="https://{{ page.metafields.reference.brand.value.weiterfuhrende_informationen_pdf.value.url }}" target="_blank" title="Further information about {{ page.metafields.reference.brand.value.markenname.value }}">Further information about {{ page.metafields.reference.brand.value.markenname.value }} (PDF)</a>
+          <a href="https://{{ page.metafields.reference.brand.value.weiterfuhrende_informationen_pdf.value.url }}" target="_blank" title="Further information about {{ page.metafields.reference.brand.value.markenname.value }}">Further information about {{ page.metafields.reference.brand.value.markenname.value }} (PDF)</a>
         </div>
         {%- endif -%}
       </div>
@@ -73,7 +73,7 @@
       </div>
       <div class="imprint-pop-up text-container">
        {%- if page.metafields.reference.brand.value.marke-impressum.value != blank -%}
-        {{ page.metafields.reference.brand.value.marke-impressum.value }}
+        <p>{{ page.metafields.reference.brand.value.marke-impressum | metafield_tag }}</p>
        {%- else -%}
        <p>Unfortunately, this information has not yet been filed by {{ page.metafields.reference.brand.value.markenname.value }}. If you have any questions or uncertainties, please contact us directly.</p>
        {%- endif -%}
@@ -89,7 +89,7 @@
       </div>
       <div class="privacy-pop-up text-container">
        {%- if page.metafields.reference.brand.value.marke-datenschutz.value != blank -%}
-        {{ page.metafields.reference.brand.value.marke-datenschutz.value }}
+        {{ page.metafields.reference.brand.value.marke-datenschutz | metafield_tag }}
        {%- else -%}
        <p>Unfortunately, this information has not yet been filed by {{ page.metafields.reference.brand.value.markenname.value }}. If you have any questions or uncertainties, please contact us directly.</p>
        {%- endif -%}
@@ -105,7 +105,7 @@
         </div>
         <div class="toc-pop-up text-container">
          {%- if page.metafields.reference.brand.value.marke-agb.value != blank -%}
-          {{ page.metafields.reference.brand.value.marke-agb.value }}
+          {{ page.metafields.reference.brand.value.marke-agb | metafield_tag }}
          {%- else -%}
          <p>Unfortunately, this information has not yet been filed by {{ page.metafields.reference.brand.value.markenname.value }}. If you have any questions or uncertainties, please contact us directly.</p>
          {%- endif -%}
@@ -121,7 +121,7 @@
           </div>
           <div class="shipping-pop-up text-container">
              {%- if page.metafields.reference.brand.value.marke-versand.value != blank -%}
-              {{ page.metafields.reference.brand.value.marke-versand.value }}
+              {{ page.metafields.reference.brand.value.marke-versand | metafield_tag }}
              {%- else -%}
              <p>Unfortunately, this information has not yet been filed by {{ page.metafields.reference.brand.value.markenname.value }}. If you have any questions or uncertainties, please contact us directly.</p>
              {%- endif -%}
