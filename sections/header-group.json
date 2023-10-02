@@ -18,7 +18,7 @@
         "desktop_logo_width": 180,
         "mobile_logo_width": 140,
         "main_menu_link_list": "main-menu",
-        "main_menu_alignment": "center-split",
+        "main_menu_alignment": "center",
         "header_sticky": true,
         "sticky_index": false,
         "sticky_collection": false
