@@ -40,6 +40,8 @@
     "animate_underlines": false,
     "product_save_amount": true,
     "product_save_type": "percent",
+    "product_grid_image_size": "portrait",
+    "product_grid_image_fill": true,
     "product_hover_image": false,
     "cart_type": "drawer",
     "cart_icon": "cart",
