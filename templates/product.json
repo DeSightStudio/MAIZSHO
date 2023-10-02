@@ -3,6 +3,12 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "ee6355cb-bc53-4e66-9839-74218bb62955": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.vendor }}"
+          }
+        },
         "price": {
           "type": "price",
           "settings": {
@@ -44,6 +50,7 @@
         }
       },
       "block_order": [
+        "ee6355cb-bc53-4e66-9839-74218bb62955",
         "price",
         "separator",
         "variant_picker",
