@@ -146,6 +146,7 @@
 							display: flex;
 							flex-wrap: wrap;
 							align-items: center;
+							position: relative;
 							@include screen(med) {
 								min-height: 0px;
 								max-height: 100vh;
@@ -154,6 +155,7 @@
 							  width: 100%;
 							  height: 100%;
 							  object-fit: contain; // Skaliert das Bild, um es komplett im Container anzuzeigen, ohne es zu beschneiden
+							  position: absolute;
 							}
 						  }
 						  
