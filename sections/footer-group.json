@@ -69,17 +69,16 @@
           "type": "menu",
           "settings": {
             "show_footer_title": true,
-            "menu": "useful-information",
+            "menu": "maizon-store",
             "container_width": 20
           }
         },
-        "bbf128a4-3cb9-4285-b725-7c3f407857ba": {
-          "type": "custom",
+        "26901ef4-b6bf-4b50-94b9-d2043c653e51": {
+          "type": "menu",
           "settings": {
             "show_footer_title": true,
-            "title": "About Maizon",
-            "text": "<p>MAIZON is a new exclusive digital platform dedicated to seekers of true luxury. MAIZON complements industry-leading stores with genuinely outstanding items in the categories of homeware, jewellery, beauty, lifestyle, wellbeing, accessories and more. Vanessa Kaiser and Caroline Pezzetta<em><strong>, <\/strong><\/em>the owner of STUDIO PEZZETTA - one of the leading high end Showrooms for DACH region (<a href=\"http:\/\/www.studio-pezzetta.com\">www.studio-pezzetta.com<\/a>), have created a digital space in order to connect selected lifestyle brands with leading multi brand stores across Europe. Having spent over 20 years at the cutting-edge of fashion and e-commerce, we have nurtured longstanding relationships with global clients and suppliers who share our unique vision – enabling us to create a market-leading b2b business designed to both elevate and inspire.<\/p>",
-            "container_width": 31
+            "menu": "footer",
+            "container_width": 20
           }
         },
         "footer-2": {
@@ -95,7 +94,7 @@
       "block_order": [
         "footer-0",
         "footer-1",
-        "bbf128a4-3cb9-4285-b725-7c3f407857ba",
+        "26901ef4-b6bf-4b50-94b9-d2043c653e51",
         "footer-2"
       ],
       "settings": {
