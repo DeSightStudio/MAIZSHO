@@ -16,10 +16,25 @@
             "parallax_direction": "top",
             "overlay_opacity": 20
           }
+        },
+        "9ff4d552-4704-4873-9a13-3310ceb50853": {
+          "type": "image",
+          "settings": {
+            "title": "NEW IN 2",
+            "title_size": 40,
+            "subheading": "",
+            "link": "https:\/\/maizon-store.myshopify.com\/pages\/porcelain",
+            "link_text": "Discover now",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify:\/\/shop_images\/F8520DCC-9D5C-4543-BFDA-19CD98C97468.jpg",
+            "parallax_direction": "top",
+            "overlay_opacity": 0
+          }
         }
       },
       "block_order": [
-        "template--18755799744787__7f91dd29-3d2d-4514-9609-e2c3fc189721-16824072548fa1750d-0"
+        "template--18755799744787__7f91dd29-3d2d-4514-9609-e2c3fc189721-16824072548fa1750d-0",
+        "9ff4d552-4704-4873-9a13-3310ceb50853"
       ],
       "settings": {
         "section_height": "650px",
