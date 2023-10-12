@@ -5,9 +5,82 @@
       "disabled": true,
       "settings": {
       }
+    },
+    "4715dfc5-2f29-45c9-bfbb-1241d86c75b1": {
+      "type": "slideshow",
+      "blocks": {
+        "template--21346007056659__4715dfc5-2f29-45c9-bfbb-1241d86c75b1-image-1": {
+          "type": "image",
+          "settings": {
+            "title": "Endless\npossibilities.",
+            "title_size": 80,
+            "subheading": "Bring your brand to life",
+            "link": "",
+            "link_text": "Optional button",
+            "text_align": "vertical-bottom horizontal-left",
+            "parallax_direction": "top",
+            "overlay_opacity": 0
+          }
+        },
+        "template--21346007056659__4715dfc5-2f29-45c9-bfbb-1241d86c75b1-image-2": {
+          "type": "image",
+          "settings": {
+            "title": "Two line\nslide titles.",
+            "title_size": 80,
+            "subheading": "And big, beautiful imagery",
+            "link": "",
+            "link_text": "Optional button",
+            "text_align": "vertical-bottom horizontal-left",
+            "parallax_direction": "top",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "template--21346007056659__4715dfc5-2f29-45c9-bfbb-1241d86c75b1-image-1",
+        "template--21346007056659__4715dfc5-2f29-45c9-bfbb-1241d86c75b1-image-2"
+      ],
+      "settings": {
+        "section_height": "650px",
+        "mobile_height": "auto",
+        "parallax": true,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 5,
+        "lazyload_images": true
+      }
+    },
+    "bb13be2e-bb4b-454e-ad94-09fd19a6c7be": {
+      "type": "rich-text",
+      "blocks": {
+        "template--21346007056659__bb13be2e-bb4b-454e-ad94-09fd19a6c7be-heading-1": {
+          "type": "heading",
+          "settings": {
+            "title": "Rich text"
+          }
+        },
+        "template--21346007056659__bb13be2e-bb4b-454e-ad94-09fd19a6c7be-text-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--21346007056659__bb13be2e-bb4b-454e-ad94-09fd19a6c7be-heading-1",
+        "template--21346007056659__bb13be2e-bb4b-454e-ad94-09fd19a6c7be-text-1"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "4715dfc5-2f29-45c9-bfbb-1241d86c75b1",
+    "bb13be2e-bb4b-454e-ad94-09fd19a6c7be"
   ]
 }
