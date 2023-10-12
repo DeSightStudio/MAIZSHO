@@ -69,16 +69,15 @@
           "type": "menu",
           "settings": {
             "show_footer_title": true,
-            "menu": "useful-information",
+            "menu": "maizon-store",
             "container_width": 20
           }
         },
-        "bbf128a4-3cb9-4285-b725-7c3f407857ba": {
-          "type": "custom",
+        "26901ef4-b6bf-4b50-94b9-d2043c653e51": {
+          "type": "menu",
           "settings": {
             "show_footer_title": true,
-            "title": "About Maizon",
-            "text": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.<\/p>",
+            "menu": "footer",
             "container_width": 20
           }
         },
@@ -88,14 +87,14 @@
             "show_footer_title": true,
             "title": "Never miss news again",
             "richtext": "<p>Stay up to date on new brands, products and collection from Maizon Store. Register for free for our newsletter (unsubscribe possible at any time).<\/p>",
-            "container_width": 40
+            "container_width": 24
           }
         }
       },
       "block_order": [
         "footer-0",
         "footer-1",
-        "bbf128a4-3cb9-4285-b725-7c3f407857ba",
+        "26901ef4-b6bf-4b50-94b9-d2043c653e51",
         "footer-2"
       ],
       "settings": {

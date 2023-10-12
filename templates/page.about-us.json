@@ -1,0 +1,109 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "4715dfc5-2f29-45c9-bfbb-1241d86c75b1": {
+      "type": "slideshow",
+      "blocks": {
+        "template--21346007056659__4715dfc5-2f29-45c9-bfbb-1241d86c75b1-image-1": {
+          "type": "image",
+          "settings": {
+            "title": "Das hier ist ein Test.",
+            "title_size": 80,
+            "subheading": "Bring your brand to life",
+            "link": "",
+            "link_text": "Optional button",
+            "text_align": "vertical-bottom horizontal-left",
+            "parallax_direction": "top",
+            "overlay_opacity": 0
+          }
+        },
+        "template--21346007056659__4715dfc5-2f29-45c9-bfbb-1241d86c75b1-image-2": {
+          "type": "image",
+          "settings": {
+            "title": "Zweite Folie.",
+            "title_size": 80,
+            "subheading": "And big, beautiful imagery",
+            "link": "",
+            "link_text": "Optional button",
+            "text_align": "vertical-bottom horizontal-left",
+            "parallax_direction": "top",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "template--21346007056659__4715dfc5-2f29-45c9-bfbb-1241d86c75b1-image-1",
+        "template--21346007056659__4715dfc5-2f29-45c9-bfbb-1241d86c75b1-image-2"
+      ],
+      "settings": {
+        "section_height": "650px",
+        "mobile_height": "auto",
+        "parallax": true,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 5,
+        "lazyload_images": true
+      }
+    },
+    "bb13be2e-bb4b-454e-ad94-09fd19a6c7be": {
+      "type": "rich-text",
+      "blocks": {
+        "template--21346007056659__bb13be2e-bb4b-454e-ad94-09fd19a6c7be-heading-1": {
+          "type": "heading",
+          "settings": {
+            "title": "Überschrift hier :)"
+          }
+        },
+        "template--21346007056659__bb13be2e-bb4b-454e-ad94-09fd19a6c7be-text-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--21346007056659__bb13be2e-bb4b-454e-ad94-09fd19a6c7be-heading-1",
+        "template--21346007056659__bb13be2e-bb4b-454e-ad94-09fd19a6c7be-text-1"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "2962c77c-501b-4e7b-a7bb-bb152ab3c733": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/4907DF8F-C6D6-4925-9E34-5F09E6BBC6DE.jpg",
+        "image_mask": "none",
+        "image2": "shopify:\/\/shop_images\/351C810F-7FAD-463D-9F12-53AAFCA1007F.jpg",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "alb alb alB",
+        "text": "<p>Test test test :)<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "right",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "4715dfc5-2f29-45c9-bfbb-1241d86c75b1",
+    "bb13be2e-bb4b-454e-ad94-09fd19a6c7be",
+    "2962c77c-501b-4e7b-a7bb-bb152ab3c733"
+  ]
+}
