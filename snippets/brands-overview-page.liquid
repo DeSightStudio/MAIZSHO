@@ -1,9 +1,8 @@
 <div id="brands__overview">
 	<div id="brands__overview--inner">
-		{% assign sortedBrands = shop.metaobjects["marke"].values | sort: "reihenfolge" %}
+        {% assign sortedBrands = shop.metaobjects["marke"].values | sort_natural: "reihenfolge" %}
 		{% for brand in sortedBrands %}
 			<div class="brand__container">
-				{{ brand.reihenfolge }}
 				<div class="brand__container--inner">
 					<a href="{{ shop.url }}/pages/{{ brand.system.handle }}">
 						<image-element>
