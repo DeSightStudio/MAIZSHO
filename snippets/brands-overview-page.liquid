@@ -15,7 +15,7 @@
             
             {% for brand in shop.metaobjects["marke"].values %}
                 {% if brand.markenname == brandName %}
-                    {{ brand.reihenfolge }}
+                    
                     <div class="brand__container">
                         <div class="brand__container--inner">
                             <a href="{{ shop.url }}/pages/{{ brand.system.handle }}">
@@ -24,7 +24,7 @@
                                 </image-element>
                                 <div class="brand__title">
                                     <h3>
-                                        {{ brand.markenname }}
+                                        {{ brand.reihenfolge }} {{ brand.markenname }}
                                     </h3>
                                 </div>
                             </a>
