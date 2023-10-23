@@ -9,17 +9,32 @@
             "title": "NEW IN",
             "title_size": 40,
             "subheading": "",
-            "link": "",
-            "link_text": "DISCOVER NEW IN",
+            "link": "https:\/\/maizon-store.myshopify.com\/pages\/jaobrand",
+            "link_text": "",
             "text_align": "vertical-bottom horizontal-left",
             "image": "shopify:\/\/shop_images\/placeholder_slideshow.jpg",
             "parallax_direction": "top",
             "overlay_opacity": 20
           }
+        },
+        "9ff4d552-4704-4873-9a13-3310ceb50853": {
+          "type": "image",
+          "settings": {
+            "title": "NEW IN",
+            "title_size": 40,
+            "subheading": "",
+            "link": "https:\/\/maizon-store.myshopify.com\/pages\/herculestudio",
+            "link_text": "HERCULE STUDIO",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify:\/\/shop_images\/BRAND_PAGE.jpg",
+            "parallax_direction": "top",
+            "overlay_opacity": 0
+          }
         }
       },
       "block_order": [
-        "template--18755799744787__7f91dd29-3d2d-4514-9609-e2c3fc189721-16824072548fa1750d-0"
+        "template--18755799744787__7f91dd29-3d2d-4514-9609-e2c3fc189721-16824072548fa1750d-0",
+        "9ff4d552-4704-4873-9a13-3310ceb50853"
       ],
       "settings": {
         "section_height": "650px",
