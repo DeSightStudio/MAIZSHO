@@ -1,37 +1,21 @@
 <div id="brands__overview">
-    <div id="brands__overview--inner">
-        {% capture sortedBrands %}
-            {% for brand in shop.metaobjects["marke"].values %}
-                {{ brand.reihenfolge }}_{{ brand.markenname }}{% unless forloop.last %},{% endunless %}
-            {% endfor %}
-        {% endcapture %}
-        
-        {% assign sortedBrandsArray = sortedBrands | split: ',' | sort: "_first" %}
-        
-        {% for brandString in sortedBrandsArray %}
-            {% assign brandParts = brandString | split: '_' %}
-            {% assign brandOrder = brandParts[0] %}
-            {% assign brandName = brandParts[1] %}
-            
-            {% for brand in shop.metaobjects["marke"].values %}
-                {% if brand.markenname == brandName %}
-                    
-                    <div class="brand__container">
-                        <div class="brand__container--inner">
-                            <a href="{{ shop.url }}/pages/{{ brand.system.handle }}">
-                                <image-element>
-                                    <img src="{{ brand.hauptbild | image_url }}&amp;width=2400" alt="{{ brand.markenname }}" srcset="{{ brand.hauptbild | image_url }}&amp;width=352 352w, {{ brand.hauptbild | image_url }}&amp;width=832 832w, {{ brand.hauptbild | image_url }}&amp;width=1200 1200w, {{ brand.hauptbild | image_url }}&amp;width=1920 1920w, {{ brand.hauptbild | image_url }}&amp;width=2400 2400w" width="2400" height="3055" loading="lazy" class="image-fit lazyloaded" sizes="(min-width: 769px) 25vw, 50vw">
-                                </image-element>
-                                <div class="brand__title">
-                                    <h3>
-                                        {{ brandOrder }} {{ brand.markenname }}
-                                    </h3>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                {% endif %}
-            {% endfor %}
-        {% endfor %}
-    </div>
+	<div id="brands__overview--inner">
+		{% assign sortedBrands = shop.metaobjects["marke"].values | sort: "reihenfolge" %}
+		{% for brand in sortedBrands %}
+			<div class="brand__container">
+				<div class="brand__container--inner">
+					<a href="{{ shop.url }}/pages/{{ brand.system.handle }}">
+						<image-element>
+							<img src="{{ brand.hauptbild | image_url }}&amp;width=2400" alt="{{ brand.markenname }}" srcset="{{ brand.hauptbild | image_url }}&amp;width=352 352w, {{ brand.hauptbild | image_url }}&amp;width=832 832w, {{ brand.hauptbild | image_url }}&amp;width=1200 1200w, {{ brand.hauptbild | image_url }}&amp;width=1920 1920w, {{ brand.hauptbild | image_url }}&amp;width=2400 2400w" width="2400" height="3055" loading="lazy" class="image-fit lazyloaded" sizes="(min-width: 769px) 25vw, 50vw">
+						</image-element>
+						<div class="brand__title">
+							<h3>
+								{{ brand.markenname }}
+							</h3>
+						</div>
+					</a>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
 </div>
