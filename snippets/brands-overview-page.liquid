@@ -2,11 +2,11 @@
     <div id="brands__overview--inner">
         {% capture sortedBrands %}
             {% for brand in shop.metaobjects["marke"].values %}
-                {{ brand.reihenfolge | plus: 0 }}_{{ brand.markenname }}{% unless forloop.last %},{% endunless %}
+                {{ brand.reihenfolge }}_{{ brand.markenname }}{% unless forloop.last %},{% endunless %}
             {% endfor %}
         {% endcapture %}
         
-        {% assign sortedBrandsArray = sortedBrands | split: ',' | sort %}
+        {% assign sortedBrandsArray = sortedBrands | split: ',' | sort: "_first" %}
         
         {% for brandString in sortedBrandsArray %}
             {% assign brandParts = brandString | split: '_' %}
@@ -24,7 +24,7 @@
                                 </image-element>
                                 <div class="brand__title">
                                     <h3>
-                                        {{ brand.reihenfolge }} {{ brand.markenname }}
+                                        {{ brandOrder }} {{ brand.markenname }}
                                     </h3>
                                 </div>
                             </a>
