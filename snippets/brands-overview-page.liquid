@@ -15,6 +15,7 @@
             
             {% for brand in shop.metaobjects["marke"].values %}
                 {% if brand.markenname == brandName %}
+                    {{ brand.reihenfolge }}
                     <div class="brand__container">
                         <div class="brand__container--inner">
                             <a href="{{ shop.url }}/pages/{{ brand.system.handle }}">
