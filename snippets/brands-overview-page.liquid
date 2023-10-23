@@ -1,6 +1,6 @@
 <div id="brands__overview">
 	<div id="brands__overview--inner">
-		{% assign sortedBrands = shop.metaobjects["marke"].values %}
+		{% assign sortedBrands = shop.metaobjects["marke"].values | sort: "sortierung" %}
 		{% for brand in sortedBrands %}
 			<div class="brand__container">
 				{{ brand.sortierung }}
