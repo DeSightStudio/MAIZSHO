@@ -6,13 +6,13 @@
         "template--18755799744787__7f91dd29-3d2d-4514-9609-e2c3fc189721-16824072548fa1750d-0": {
           "type": "image",
           "settings": {
-            "title": "NEW IN",
+            "title": "",
             "title_size": 40,
             "subheading": "",
             "link": "https:\/\/maizon-store.myshopify.com\/pages\/jaobrand",
             "link_text": "",
             "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify:\/\/shop_images\/placeholder_slideshow.jpg",
+            "image": "shopify:\/\/shop_images\/Banner_b2b.jpg",
             "parallax_direction": "top",
             "overlay_opacity": 20
           }
