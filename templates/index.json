@@ -36,9 +36,9 @@
           "settings": {
             "title": "NEW IN",
             "title_size": 80,
-            "subheading": "JAO",
+            "subheading": "",
             "link": "",
-            "link_text": "Optional button",
+            "link_text": "JAO BRAND",
             "text_align": "vertical-bottom horizontal-left",
             "image": "shopify:\/\/shop_images\/JAOBRAND_001_dc1a5837-dcea-4911-8470-84ad5caed1e5.webp",
             "parallax_direction": "top",
