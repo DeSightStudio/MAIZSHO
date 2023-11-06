@@ -102,38 +102,47 @@
     <script type="text/javascript">window.setTimeout(function() { document.body.className += " loaded"; }, 25);</script>
   {% endif %}
 
-  <a class="in-page-link visually-hidden skip-link" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
-
-  <div id="PageContainer" class="page-container">
-    <div class="transition-body">
-
-      {%- sections 'header-group' -%}
-      {%- sections 'popup-group' -%}
-
-      <main class="main-content" id="MainContent">
-        {{ content_for_layout }}
-        
-      
-        
-
-      </main>
-
-      {%- sections 'footer-group' -%}
-
-    </div>
-  </div>
-
-  {%- liquid
-    render 'video-modal'
-    render 'photoswipe-template'
-    render 'tool-tip'
-  -%}
-
-  {% comment %} Image markup used when building product grid item via JS {% endcomment %}
-  <template id="predictiveImageMarkup">
-    <image-element>
-      <img class="lazyload" width height src loading="lazy" sizes="(min-width: 769px) 100px, 60px">
-    </image-element>
-  </template>
+  {% if request.path != '/account/register' %}
+    {% if customer %}
+      {% if customer.metafields.custom.bereits_angelegt_ != true %}
+        {% include 'not-approved' %}
+      {% else %}
+       <a class="in-page-link visually-hidden skip-link" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
+       
+       <div id="PageContainer" class="page-container">
+       <div class="transition-body">
+       
+         {%- sections 'header-group' -%}
+         {%- sections 'popup-group' -%}
+       
+         <main class="main-content" id="MainContent">
+         {{ content_for_layout }}
+         </main>
+       
+         {%- sections 'footer-group' -%}
+       
+       </div>
+       </div>
+       
+       {%- liquid
+       render 'video-modal'
+       render 'photoswipe-template'
+       render 'tool-tip'
+       -%}
+       
+       {% comment %} Image markup used when building product grid item via JS {% endcomment %}
+       <template id="predictiveImageMarkup">
+       <image-element>
+         <img class="lazyload" width height src loading="lazy" sizes="(min-width: 769px) 100px, 60px">
+       </image-element>
+       </template>
+      {% endif %}
+    {% else %}
+      {% include 'not-logged-in' %}
+    {% endif %}
+  {% else %}
+    {% include 'register-new' %}
+  {% endif %}
+  
 </body>
 </html>

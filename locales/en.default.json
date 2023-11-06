@@ -172,7 +172,7 @@
     "account": {
       "title": "My account",
       "details": "Account details",
-      "view_addresses": "View addresses",
+      "view_addresses": "View or edit addresses",
       "return": "Return to account"
     },
     "activate_account": {
@@ -266,7 +266,7 @@
       "last_name": "Last Name",
       "email": "Email",
       "password": "Password",
-      "submit": "Create",
+      "submit": "Register my company",
       "cancel": "Return to Store"
     }
   },
@@ -286,7 +286,7 @@
       "account": "Account",
       "log_out": "Log out",
       "log_in": "Log in",
-      "create_account": "Create account"
+      "create_account": "Register your company"
     },
     "footer": {
       "social_platform": "{{ name }} on {{ platform }}"

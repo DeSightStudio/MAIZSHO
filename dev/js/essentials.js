@@ -1,7 +1,18 @@
 jQuery(document).ready(function() {
 	
 	setTimeout(function(){ 
-	
+		
+		jQuery('#RecoverPassword').on('click', function(event) {
+			event.preventDefault(); 
+			jQuery("#CustomerLoginForm").addClass("hide");
+			jQuery("#ResetPassword").removeClass("hide");
+		});
+		
+		jQuery('#HideRecoverPasswordLink').on('click', function(event) {
+			event.preventDefault(); 
+			jQuery("#CustomerLoginForm").removeClass("hide");
+			jQuery("#ResetPassword").addClass("hide");
+		});
 		  
 		  jQuery('.ProductForm__Label:contains("Menge"), .ProductForm__QuantitySelector').wrapAll('<div class="wrapped" />');
 		  

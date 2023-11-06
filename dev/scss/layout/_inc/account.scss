@@ -1,0 +1,43 @@
+.template-customers-account {
+	#MainContent {
+		.customers {
+			display: block;
+			float: none;
+			clear: both;
+			width: 90%;
+			max-width: 1140px;
+			padding: $padding-large;
+			@include box-shadow(0, 13px, 43px, rgba(37, 46, 89, .1));
+			border: 1px solid $base-grey-light;
+			position: relative;
+			margin: $margin-large auto;
+			top: 0px;
+			right: 0px;
+			bottom: 0px;
+			left: 0px;
+			@include transform(0%, 0%);
+		}
+	}
+}
+
+.template-customers-addresses {
+	#MainContent {
+		.page-content {
+			display: block;
+			float: none;
+			clear: both;
+			width: 90%;
+			max-width: 1140px;
+			padding: $padding-large;
+			@include box-shadow(0, 13px, 43px, rgba(37, 46, 89, .1));
+			border: 1px solid $base-grey-light;
+			position: relative;
+			margin: $margin-large auto;
+			top: 0px;
+			right: 0px;
+			bottom: 0px;
+			left: 0px;
+			@include transform(0%, 0%);
+		}
+	}
+}

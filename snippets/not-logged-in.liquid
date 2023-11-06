@@ -1,0 +1,78 @@
+<div id="notLoggedIn">
+	<div class="page-width page-width--narrow">
+		<header class="section-header">
+			<a href="https://maizon-store.com/" title="Maizon Store"><img src="https://maizon-store.com/cdn/shop/files/logo_maizon_black_png_800px.png" title="Maizon Store" alt="Maizon Store Logo" /></a>
+		  <h1 class="section-header__title">
+			Welcome at Maizon Store
+		  </h1>
+		</header>
+		<section class="section-intro">
+			<p>
+				Hello at Maizon! This is a B2B platform for curated items. In order to use our marketplace, you must be registered with Maizon Store. If you are already registered, log in below.
+			</p>
+		</section>
+		<section id="CustomerLoginForm" class="section-form">
+			<div class="form-vertical">
+				 {% form 'customer_login' %}
+			
+				   {{ form.errors | default_errors }}
+			
+				   <label for="CustomerEmail">{{ 'customer.login.email' | t }}</label>
+				   <input type="email" name="customer[email]" id="CustomerEmail" class="input-full{% if form.errors contains 'email' %} error{% endif %}" autocorrect="off" autocapitalize="off" autofocus>
+			
+				   {% if form.password_needed %}
+				   <div class="grid">
+					 <div class="grid__item one-half">
+					   <label for="CustomerPassword">{{ 'customer.login.password' | t }}</label>
+					 </div>
+					 <div class="grid__item one-half text-right">
+					   <small class="label-info">
+						 <a href="#recover" id="RecoverPassword" class="js-no-transition">
+						   {{ 'customer.login.forgot_password' | t }}
+						 </a>
+					   </small>
+					 </div>
+				   </div>
+				   <input type="password" value="" name="customer[password]" id="CustomerPassword" class="input-full{% if form.errors contains 'password' %} error{% endif %}">
+				   {% endif %}
+			
+				   <p>
+					 <label for="login-sign-in-submit" class="hidden-label">{{ 'customer.login.sign_in' | t }}</label>
+					 <input type="submit" id="login-sign-in-submit" class="btn btn--full btn--no-animate" value="{{ 'customer.login.sign_in' | t }}">
+				   </p>
+				   <p>{{ 'layout.customer.create_account' | t | customer_register_link }}</p>
+			
+				 {% endform %}
+			   </div>
+		</section>
+		<section id="ResetPassword" class="section-form hide">
+			<div id="RecoverPasswordForm">
+			
+				<h2>{{ 'customer.recover_password.title' | t }}</h2>
+				<p>{{ 'customer.recover_password.subtext' | t }}</p>
+			
+			
+				<div class="form-vertical">
+				  {% form 'recover_customer_password' %}
+			
+					{{ form.errors | default_errors }}
+			
+					{% if form.posted_successfully? %}
+					  <span class="hide reset-password-success"></span>
+					{% endif %}
+			
+					<label for="RecoverEmail">{{ 'customer.recover_password.email' | t }}</label>
+					<input type="email" value="" name="email" id="RecoverEmail" class="input-full" autocorrect="off" autocapitalize="off">
+			
+					<p>
+					  <label for="recover-password-submit" class="hidden-label">{{ 'customer.recover_password.submit' | t }}</label>
+					  <input type="submit" id="recover-password-submit" class="btn" value="{{ 'customer.recover_password.submit' | t }}">
+					</p>
+					<button type="button" id="HideRecoverPasswordLink">{{ 'customer.recover_password.cancel' | t }}</button>
+				  {% endform %}
+				</div>
+			
+			  </div>
+		</section>
+	</div>
+</div>
