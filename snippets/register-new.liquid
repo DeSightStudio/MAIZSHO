@@ -1,0 +1,44 @@
+<div id="customRegistration">
+	<div class="page-width page-width--narrow">
+		<header class="section-header">
+			<a href="https://maizon-store.com/" title="Maizon Store"><img src="https://maizon-store.com/cdn/shop/files/logo_maizon_black_png_800px.png" title="Maizon Store" alt="Maizon Store Logo" /></a>
+		  <h1 class="section-header__title">
+			Register your company
+		  </h1>
+		</header>
+		<section class="section-intro">
+			<p>
+				Would you like to become part of Maizon Store? Register for a free account with Maizon Store.. We will check your data within 5 working days and then activate your account.
+			</p>
+			<p>
+				After we have activated your account, you can enter your company (company name, address, etc.) in your account.
+			</p>
+		</section>
+		<section id="CustomerRegistrationForm" class="section-form">
+			<div class="form-vertical">
+				{% form 'create_customer' %}
+			
+				  {{ form.errors | default_errors }}
+			
+				  <label for="FirstName">{{ 'customer.register.first_name' | t }}</label>
+				  <input type="text" name="customer[first_name]" id="FirstName" class="input-full" {% if form.first_name %}value="{{ form.first_name }}"{% endif %} autocapitalize="words" autofocus>
+			
+				  <label for="LastName">{{ 'customer.register.last_name' | t }}</label>
+				  <input type="text" name="customer[last_name]" id="LastName" class="input-full" {% if form.last_name %}value="{{ form.last_name }}"{% endif %} autocapitalize="words">
+			
+				  <label for="Email">{{ 'customer.register.email' | t }}</label>
+				  <input type="email" name="customer[email]" id="Email" class="input-full{% if form.errors contains 'email' %} error{% endif %}" {% if form.email %} value="{{ form.email }}"{% endif %} autocorrect="off" autocapitalize="off">
+			
+				  <label for="CreatePassword">{{ 'customer.register.password' | t }}</label>
+				  <input type="password" name="customer[password]" id="CreatePassword" class="input-full{% if form.errors contains 'password' %} error{% endif %}">
+			
+				  <p>
+					<label for="register-submit" class="hidden-label">{{ 'customer.register.submit' | t }}</label>
+					<input type="submit" id="register-submit" value="{{ 'customer.register.submit' | t }}" class="btn btn--full btn--no-animate">
+				  </p>
+			
+				{% endform %}
+			  </div>
+		</section>
+	</div>
+</div>
