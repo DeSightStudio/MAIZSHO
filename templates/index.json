@@ -6,13 +6,13 @@
         "template--18755799744787__7f91dd29-3d2d-4514-9609-e2c3fc189721-16824072548fa1750d-0": {
           "type": "image",
           "settings": {
-            "title": "NEW IN",
+            "title": "",
             "title_size": 40,
             "subheading": "",
             "link": "https:\/\/maizon-store.myshopify.com\/pages\/jaobrand",
             "link_text": "",
             "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify:\/\/shop_images\/placeholder_slideshow.jpg",
+            "image": "shopify:\/\/shop_images\/banner_NEU.jpg",
             "parallax_direction": "top",
             "overlay_opacity": 20
           }
@@ -30,11 +30,26 @@
             "parallax_direction": "top",
             "overlay_opacity": 0
           }
+        },
+        "b97fabe6-252c-4625-bec9-e0262fd308dc": {
+          "type": "image",
+          "settings": {
+            "title": "NEW IN",
+            "title_size": 80,
+            "subheading": "",
+            "link": "",
+            "link_text": "JAO BRAND",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify:\/\/shop_images\/JAOBRAND_001_dc1a5837-dcea-4911-8470-84ad5caed1e5.webp",
+            "parallax_direction": "top",
+            "overlay_opacity": 0
+          }
         }
       },
       "block_order": [
         "template--18755799744787__7f91dd29-3d2d-4514-9609-e2c3fc189721-16824072548fa1750d-0",
-        "9ff4d552-4704-4873-9a13-3310ceb50853"
+        "9ff4d552-4704-4873-9a13-3310ceb50853",
+        "b97fabe6-252c-4625-bec9-e0262fd308dc"
       ],
       "settings": {
         "section_height": "650px",
