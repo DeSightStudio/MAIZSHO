@@ -85,24 +85,23 @@
       </div>
     {%- endif -%}
   {%- endif -%}
+  
   {% assign currentUser = customer %}
-  {% assign userTags = currentUser.tags | split: ',' %}
-  {%- for item in items -%}
-    {%- if item.object_type == 'product' -%}
-      {% assign productTags = item.tags | split: ',' %}
-      {% for tag in productTags %}
-        {% if userTags contains tag %}
+  {% assign userTags = currentUser.tags %}
+  {% for tag in userTags %}
+    {%- for item in items -%}
+      {% if item.tags contains tag %}
+        {%- if item.object_type == 'product' -%}
           {%- render 'product-grid-item', product: item, per_row: per_row, -%}
-          {% break %}
-        {% endif %}
-      {% endfor %}
+        {%- else -%}
+          {%- render 'search-grid-item', item: item, per_row: per_row, -%}
+        {%- endif -%}
+      {%- endif -%}
     {%- else -%}
-      {%- render 'search-grid-item', item: item, per_row: per_row, -%}
-    {%- endif -%}
-  {%- else -%}
-    <div class="grid__item">
-      <p>{{ 'collections.general.no_matches' | t }}</p>
-    </div>
-  {%- endfor -%}
-
+      <div class="grid__item">
+        <p>{{ 'collections.general.no_matches' | t }}</p>
+      </div>
+    {%- endfor -%}
+  {% endfor %}
+  
 </div>
