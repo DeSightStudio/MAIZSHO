@@ -102,7 +102,11 @@
     <script type="text/javascript">window.setTimeout(function() { document.body.className += " loaded"; }, 25);</script>
   {% endif %}
 
-  {% if request.path != '/account/register' %}
+  {% if request.path == '/account/register' OR request.path == '/account/recover' %}
+    {% include 'register-new' %}
+  {% elsif request.path contains '/account/reset' %}
+    {% include 'reset-password' %}
+  {% else %}
     {% if customer %}
       {% if customer.metafields.custom.bereits_angelegt_ != true %}
         {% include 'not-approved' %}
@@ -140,10 +144,6 @@
     {% else %}
       {% include 'not-logged-in' %}
     {% endif %}
-  {% elsif request.path contains '/account/reset' %}
-    {% include 'reset-password' %}
-  {% else %}
-    {% include 'register-new' %}
   {% endif %}
 </body>
 </html>
