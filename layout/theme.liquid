@@ -102,7 +102,7 @@
     <script type="text/javascript">window.setTimeout(function() { document.body.className += " loaded"; }, 25);</script>
   {% endif %}
 
-  {% if request.path == '/account/register' %}
+  {% if request.path == '/account/register' OR request.path == '/account/recover %}
     {% include 'register-new' %}
   {% elsif request.path contains '/account/reset' %}
     {% include 'reset-password' %}

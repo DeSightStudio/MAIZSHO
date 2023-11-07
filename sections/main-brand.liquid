@@ -29,27 +29,35 @@
     </div>
     <div id="brand__container--products">
       <h2>Products from {{ page.metafields.reference.brand.value.markenname.value }}</h2>
-      <div id="brand__container--products--inner">
+      <div id="brand__container--products--inner">     
+      {% assign currentUser = customer %}
+      {% assign userTags = currentUser.tags | split: ',' %}
+      <strong>Tags:</strong> {{ userTags | join: ',' }}
       {% assign products = page.metafields.reference.brand.value.produkte_der_marke.value %}
       {%- for product in products -%}
-        <div class="brand__product--container">
-          <a href="{{ product.url }}" title="{{ product.title }}" class="brand__product__url">
-            <div class="brand__product--container__image">
-              <img src="{{ product.featured_image | image_url }}" alt="{{ product.title }}" class="product__main-image" />
-            </div>
-            <div class="brand__product--container__headline">
-              <h3>
-                {{ product.title }}
-              </h3>
-            </div>
-            <div class="brand__product--container__price">
-              <p>
-                {{ product.price | money }}
-              </p>
-            </div>
-          </a>
-        </div>
+      {% assign productTags = product.tags | split: ',' %}
+
+      <div class="brand__product--container">
+        <a href="{{ product.url }}" title="{{ product.title }}" class="brand__product__url">
+          <div class="brand__product--container__image">
+            <img src="{{ product.featured_image | image_url }}" alt="{{ product.title }}" class="product__main-image" />
+          </div>
+          <div class="brand__product--container__headline">
+            <h3>
+              {{ product.title }}
+              {{ productTags | join: ',' }}
+            </h3>
+          </div>
+          <div class="brand__product--container__price">
+            <p>
+              {{ product.price | money }}
+            </p>
+          </div>
+        </a>
+      </div>
+
       {%- endfor -%}
+      
     </div>
     <div id="brand__container--footer">
       <div id="brand__footer--inner">
