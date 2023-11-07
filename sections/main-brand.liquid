@@ -32,7 +32,6 @@
       <div id="brand__container--products--inner">
         {% assign currentUser = customer %}
         {% assign userTags = currentUser.tags | split: ',' %}
-        <strong>Tags:</strong> {{ userTags | join: ',' }}
         {% assign products = page.metafields.reference.brand.value.produkte_der_marke.value %}
         {%- for product in products -%}
         {% assign productTags = product.tags | split: ',' %}
@@ -47,7 +46,6 @@
                 <div class="brand__product--container__headline">
                   <h3>
                     {{ product.title }}
-                    {{ productTags | join: ',' }}
                   </h3>
                 </div>
                 <div class="brand__product--container__price">
