@@ -100,11 +100,9 @@
           endif
         -%}
 
-        {%- paginate collection.products by paginate_by -%}
-
         <div id="CollectionAjaxResult" {{ block.shopify_attributes }}>
           <div id="CollectionAjaxContent">
-
+        
             {% render 'collection-grid',
               collection: collection,
               items: collection.products,
@@ -113,15 +111,9 @@
               quick_shop_enable: settings.quick_shop_enable,
               per_row: block.settings.per_row
             %}
-
-            {%- if paginate.pages > 1 -%}
-              {%- render 'pagination', paginate: paginate -%}
-            {%- endif -%}
-
+        
           </div>
         </div>
-
-        {%- endpaginate -%}
       {%- endcase -%}
     {%- endfor -%}
   </div>
