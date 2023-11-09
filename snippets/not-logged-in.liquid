@@ -16,7 +16,7 @@
 				 {% form 'customer_login' %}
 			
 				   {{ form.errors | default_errors }}
-			
+				   <input type="hidden" name="return_to" value="/">
 				   <label for="CustomerEmail">{{ 'customer.login.email' | t }}</label>
 				   <input type="email" name="customer[email]" id="CustomerEmail" class="input-full{% if form.errors contains 'email' %} error{% endif %}" autocorrect="off" autocapitalize="off" autofocus>
 			
