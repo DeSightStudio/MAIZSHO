@@ -88,23 +88,24 @@
   
   {% assign currentUser = customer %}
   {% assign userTags = currentUser.tags %}
-  {% assign displayedProducts = '' %} <!-- Liste der bereits angezeigten Produkte -->
+  {% assign displayedProducts = '' %}
   
-  {% for item in items %}
-    {% assign productDisplayed = false %}
-    {% for tag in userTags %}
-      {% if item.tags contains tag %}
-        {% unless displayedProducts contains item.handle %}
-          {% assign displayedProducts = displayedProducts | append: item.handle | append: ',' %}
-          {% if item.object_type == 'product' %}
-            {%- render 'product-grid-item', product: item, per_row: per_row -%}
-          {% else %}
-            {%- render 'search-grid-item', item: item, per_row: per_row -%}
-          {% endif %}
-        {% endunless %}
+  {% paginate collection.products by 250 %}
+    {% for product in collection.products %}
+      {% assign productDisplayed = false %}
+      {% for tag in userTags %}
+        {% if product.tags contains tag %}
+          {% unless displayedProducts contains product.handle %}
+            {% assign displayedProducts = displayedProducts | append: product.handle | append: ',' %}
+            {% assign productDisplayed = true %}
+          {% endunless %}
+        {% endif %}
+      {% endfor %}
+      {% if productDisplayed %}
+        {%- render 'product-grid-item', product: product, per_row: per_row -%}
       {% endif %}
     {% endfor %}
-  {% endfor %}
+  {% endpaginate %}
   
   {% if displayedProducts == blank %}
     <div class="grid__item">
