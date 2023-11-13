@@ -1,17 +1,14 @@
 #customRegistration {
 	display: block;
-	position: absolute;
+	position: relative;
 	float: none;
 	clear: both;
 	width: 90%;
 	max-width: 768px;
-	margin: $margin-none;
+	margin: $margin-large auto;
 	padding: $padding-large;
 	@include box-shadow(0, 13px, 43px, rgba(37, 46, 89, .1));
 	border: 1px solid $base-grey-light;
-	top: 50%;
-	left: 50%;
-	@include transform(-50%, -50%);
 	@include screen(med) {
 		position: relative;
 		margin: $margin-large auto;
