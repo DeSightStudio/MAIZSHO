@@ -20,11 +20,11 @@
         "9ff4d552-4704-4873-9a13-3310ceb50853": {
           "type": "image",
           "settings": {
-            "title": "NEW IN",
+            "title": "",
             "title_size": 40,
             "subheading": "",
             "link": "https:\/\/maizon-store.myshopify.com\/pages\/herculestudio",
-            "link_text": "HERCULE STUDIO",
+            "link_text": "",
             "text_align": "vertical-bottom horizontal-left",
             "image": "shopify:\/\/shop_images\/Banner_mit_Presse_2.jpg",
             "parallax_direction": "top",
