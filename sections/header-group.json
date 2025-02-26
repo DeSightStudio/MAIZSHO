@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "type": "header",
   "name": "t:sections.header-group.name",
@@ -5,16 +14,46 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "settings": {
-        "announcement_text": "24\/7  B2B concept store shoppping",
+        "announcement_text": "24/7  B2B concept store shoppping",
         "announcement_link": "",
         "announcement_closable": false
       }
     },
     "header": {
       "type": "header",
+      "blocks": {
+        "megamenu_Qw3BL8": {
+          "type": "megamenu",
+          "settings": {
+            "menu_item": "",
+            "promo_heading_1": "",
+            "promo_text_1": "",
+            "promo_url_1": "",
+            "promo_heading_2": "",
+            "promo_text_2": "",
+            "promo_url_2": ""
+          }
+        },
+        "megamenu_TfG3rw": {
+          "type": "megamenu",
+          "settings": {
+            "menu_item": "",
+            "promo_heading_1": "",
+            "promo_text_1": "",
+            "promo_url_1": "",
+            "promo_heading_2": "",
+            "promo_text_2": "",
+            "promo_url_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "megamenu_Qw3BL8",
+        "megamenu_TfG3rw"
+      ],
       "settings": {
-        "logo": "shopify:\/\/shop_images\/logo_maizon_black_png_800px.png",
-        "logo-inverted": "shopify:\/\/shop_images\/logo_maizon_white_png_800px.png",
+        "logo": "shopify://shop_images/logo_maizon_black_png_800px.png",
+        "logo-inverted": "shopify://shop_images/logo_maizon_white_png_800px.png",
         "desktop_logo_width": 180,
         "mobile_logo_width": 140,
         "main_menu_link_list": "main-menu",
