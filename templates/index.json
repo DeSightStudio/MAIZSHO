@@ -53,27 +53,12 @@
             "parallax_direction": "top",
             "overlay_opacity": 0
           }
-        },
-        "9ff4d552-4704-4873-9a13-3310ceb50853": {
-          "type": "image",
-          "settings": {
-            "title": "",
-            "title_size": 40,
-            "subheading": "",
-            "link": "https://maizon-store.com/pages/businessandpleasure",
-            "link_text": "SASKIA DIEZ",
-            "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify://shop_images/SASKIA_DIEZ_Profile_banner.jpg",
-            "parallax_direction": "top",
-            "overlay_opacity": 0
-          }
         }
       },
       "block_order": [
         "template--18755799744787__7f91dd29-3d2d-4514-9609-e2c3fc189721-16824072548fa1750d-0",
         "b97fabe6-252c-4625-bec9-e0262fd308dc",
-        "image_MGgm9D",
-        "9ff4d552-4704-4873-9a13-3310ceb50853"
+        "image_MGgm9D"
       ],
       "settings": {
         "section_height": "450px",
