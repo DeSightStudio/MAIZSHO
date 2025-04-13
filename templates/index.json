@@ -1,62 +1,71 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "7f91dd29-3d2d-4514-9609-e2c3fc189721": {
       "type": "slideshow",
       "blocks": {
+        "image_MGgm9D": {
+          "type": "image",
+          "settings": {
+            "title": "HELLO \nAT MAIZON\nYOUR B2B \nPLATFORM \nFOR CURATED\n ITEMS",
+            "title_size": 69,
+            "subheading": "",
+            "link": "https://maizon-store.com/pages/anthese",
+            "link_text": "ANTHESE",
+            "text_align": "vertical-bottom horizontal-left",
+            "image": "shopify://shop_images/BRAND_BANNER_perfume_046deb71-1e0e-4d38-bd77-46bfff37e661.jpg",
+            "parallax_direction": "top",
+            "overlay_opacity": 0
+          }
+        },
         "template--18755799744787__7f91dd29-3d2d-4514-9609-e2c3fc189721-16824072548fa1750d-0": {
           "type": "image",
           "settings": {
             "title": "",
             "title_size": 40,
             "subheading": "",
-            "link": "https:\/\/maizon-store.myshopify.com\/pages\/jaobrand",
-            "link_text": "",
+            "link": "https://maizon-store.com/pages/kinfill",
+            "link_text": "KINFILL",
             "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify:\/\/shop_images\/banner_NEU.jpg",
+            "image": "shopify://shop_images/Brand_1.jpg",
             "parallax_direction": "top",
             "overlay_opacity": 20
-          }
-        },
-        "9ff4d552-4704-4873-9a13-3310ceb50853": {
-          "type": "image",
-          "settings": {
-            "title": "NEW IN",
-            "title_size": 40,
-            "subheading": "",
-            "link": "https:\/\/maizon-store.myshopify.com\/pages\/herculestudio",
-            "link_text": "HERCULE STUDIO",
-            "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify:\/\/shop_images\/BRAND_PAGE.jpg",
-            "parallax_direction": "top",
-            "overlay_opacity": 0
           }
         },
         "b97fabe6-252c-4625-bec9-e0262fd308dc": {
           "type": "image",
           "settings": {
-            "title": "NEW IN",
+            "title": "",
             "title_size": 80,
             "subheading": "",
             "link": "",
             "link_text": "JAO BRAND",
             "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify:\/\/shop_images\/JAOBRAND_001_dc1a5837-dcea-4911-8470-84ad5caed1e5.webp",
+            "image": "shopify://shop_images/JAOBRAND_001_dc1a5837-dcea-4911-8470-84ad5caed1e5.webp",
             "parallax_direction": "top",
             "overlay_opacity": 0
           }
         }
       },
       "block_order": [
+        "image_MGgm9D",
         "template--18755799744787__7f91dd29-3d2d-4514-9609-e2c3fc189721-16824072548fa1750d-0",
-        "9ff4d552-4704-4873-9a13-3310ceb50853",
         "b97fabe6-252c-4625-bec9-e0262fd308dc"
       ],
       "settings": {
-        "section_height": "650px",
+        "section_height": "450px",
         "mobile_height": "auto",
         "parallax": false,
         "style": "arrows",
-        "autoplay": false,
+        "autoplay": true,
         "autoplay_speed": 5,
         "lazyload_images": true
       }
@@ -74,7 +83,7 @@
           "type": "text",
           "settings": {
             "enlarge_text": false,
-            "text": "<p>MAIZON is a new digital platform dedicated to seekers of true luxury – those lovers of <br\/>excellence who live to curate every aspect of their world.<br\/><br\/>The mindful luxury consumer knows that less is more, and seeks out only those rare items that they can truly fall in love with – distinctive pieces that support modern craftsmanship, and select items to treasure from niche brands destined for greatness. <br\/><br\/>MAIZON complements industry-leading stores with genuinely outstanding items in the <br\/>categories of homeware, jewellery, beauty, lifestyle, and more.<br\/><br\/>Having spent over 20 years at the cutting-edge of fashion and e-commerce, we have nurtured longstanding relationships with global clients and suppliers who share our unique vision – <br\/>enabling us to create a market-leading b2b business designed to both elevate and inspire.<br\/><br\/>We are keen to find out your desires and dreams, so that we can grow this into a successful opportunity together – one that spearheads sophistication, <br\/>and presents the very best in everything.<br\/><br\/><strong>Let’s curate …<\/strong><\/p>"
+            "text": "<p>MAIZON is a new digital platform dedicated to seekers of true luxury – those lovers of <br/>excellence who live to curate every aspect of their world.<br/><br/>The mindful luxury consumer knows that less is more, and seeks out only those rare items that they can truly fall in love with – distinctive pieces that support modern craftsmanship, and select items to treasure from niche brands destined for greatness. <br/><br/>MAIZON complements industry-leading stores with genuinely outstanding items in the <br/>categories of homeware, jewellery, beauty, lifestyle, and more.<br/><br/>Having spent over 20 years at the cutting-edge of fashion and e-commerce, we have nurtured longstanding relationships with global clients and suppliers who share our unique vision – <br/>enabling us to create a market-leading b2b business designed to both elevate and inspire.<br/><br/>We are keen to find out your desires and dreams, so that we can grow this into a successful opportunity together – one that spearheads sophistication, <br/>and presents the very best in everything.<br/><br/><strong>Let’s curate …</strong></p>"
           }
         }
       },
@@ -200,7 +209,7 @@
         "530b39a9-cbe4-49d4-83fa-d0a78d19e19d": {
           "type": "button",
           "settings": {
-            "link": "shopify:\/\/pages\/all-brands",
+            "link": "shopify://pages/all-brands",
             "link_text": "Discover all brands"
           }
         }
