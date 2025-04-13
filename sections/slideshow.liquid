@@ -203,7 +203,7 @@
                     <div class="hero__text-content {{ block.settings.text_align }}">
 
                       {%- unless block.settings.title == blank -%}
-                        <h2 class="h1 hero__title">
+                        <h2 class="h1 hero__title"{% if block.settings.title_color != blank %} style="color: {{ block.settings.title_color }};"{% endif %}>
                           <div class="animation-cropper"><div class="animation-contents">
                           {{ block.settings.title | newline_to_br }}
                           </div></div>
@@ -389,6 +389,12 @@
           "min": 40,
           "max": 100,
           "unit": "px"
+        },
+        {
+          "type": "color",
+          "id": "title_color",
+          "label": "t:sections.slideshow.blocks.slide.settings.title_color.label",
+          "info": "t:sections.slideshow.blocks.slide.settings.title_color.info"
         },
         {
           "type": "text",
