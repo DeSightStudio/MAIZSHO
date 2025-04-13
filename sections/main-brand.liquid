@@ -15,6 +15,13 @@
         <h4>Minimum order value at {{ page.metafields.reference.brand.value.markenname.value }}: <span>{{ page.metafields.reference.brand.value.mindestbestellwert.value }}</span></h4>
       </div>
       {%- endif -%}
+      <div id="brand__container--order-note">
+      {%- if page.metafields.reference.brand.value.bestellhinweis.value == blank -%}
+        <h3>Please note, your order must be placed by Brand</h3>
+      {%- else -%}
+        <h3>{{ page.metafields.reference.brand.value.bestellhinweis.value }}</h3>
+      {%- endif -%}
+    </div>
       <div id="brand__description">
         <h2>About us</h2>
         <p>

@@ -8,7 +8,7 @@
 				.hero__text-wrap {
 					.hero__text-content {
 						h1, h2, h3, h4, h5, h6 {
-							font-size: $h1-size;
+							font-size: $h1-size !important;
 							color: $base-white;
 							font-weight: $font-bold;
 							margin: $margin-none;
