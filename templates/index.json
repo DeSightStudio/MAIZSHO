@@ -17,6 +17,7 @@
           "settings": {
             "title": "HELLO \nAT MAIZON\nYOUR B2B \nPLATFORM \nFOR CURATED\n ITEMS",
             "title_size": 69,
+            "title_color": "",
             "subheading": "",
             "link": "https://maizon-store.com/pages/anthese",
             "link_text": "ANTHESE",
@@ -31,6 +32,7 @@
           "settings": {
             "title": "",
             "title_size": 40,
+            "title_color": "",
             "subheading": "",
             "link": "https://maizon-store.com/pages/kinfill",
             "link_text": "KINFILL",
@@ -45,6 +47,7 @@
           "settings": {
             "title": "",
             "title_size": 80,
+            "title_color": "",
             "subheading": "",
             "link": "",
             "link_text": "JAO BRAND",
@@ -157,6 +160,7 @@
         "1499789718857-4",
         "1499789718857-5"
       ],
+      "disabled": true,
       "settings": {
         "title": "",
         "divider": false,
