@@ -86,9 +86,13 @@
 					a {
 						display: inline-block;
 						padding: $padding-small $padding-medium;
+						margin: $margin-none $margin-small;
 						@include border-radius(6px, 6px, 6px, 6px);
 						border: 1px solid $base-grey-light;
 						font-weight: bold;
+						@include screen(med) {
+							margin: $margin-small $margin-none;
+						}
 						&:hover {
 							border: 1px solid $base-black;
 							@include transition(all .3s ease);
