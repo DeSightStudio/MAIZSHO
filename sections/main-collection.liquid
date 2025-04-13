@@ -64,16 +64,7 @@
         </h1>
       </header>
     {%- endunless -%}
-
-    {% render 'collection-filters',
-      collection: collection,
-      enable_sort: section.settings.enable_sort,
-      collection_tags_style: section.settings.collection_tags_style
-    %}
-
     {%- for block in section.blocks -%}
-      {%- assign block_index = forloop.index -%}
-
       {%- case block.type -%}
       {%- when 'collection_description' -%}
         {%- if collection.description != blank -%}
@@ -92,26 +83,65 @@
           {%- endunless -%}
         {%- endif -%}
       {%- when 'product_grid' -%}
-        {%- liquid
-          assign per_row = block.settings.per_row
-          assign paginate_by = per_row | times: 5
-          if block.settings.collection_subnav_style == 'inline'
-            assign paginate_by = paginate_by | minus: 1
-          endif
-        -%}
-
         <div id="CollectionAjaxResult" {{ block.shopify_attributes }}>
-          <div id="CollectionAjaxContent">
-        
-            {% render 'collection-grid',
-              collection: collection,
-              items: collection.products,
-              collection_subnav_style: block.settings.collection_subnav_style,
-              mobile_flush_grid: block.settings.mobile_flush_grid,
-              quick_shop_enable: settings.quick_shop_enable,
-              per_row: block.settings.per_row
-            %}
-        
+          <div id="CollectionAjaxContent" class="grid-uniform brand-grid-uniform">
+            <div id="brands__overview">
+              <div id="brands__overview--inner">
+                {% assign sorted_brands = shop.metaobjects.marke.values | sort: 'reihenfolge' %}
+                {% assign brands_to_display = 0 %}
+                
+                {% for brand in sorted_brands %}
+                  {% assign should_display_brand = false %}
+                  {% assign brand_products = brand.produkte_der_marke.value %}
+                  
+                  {% for brand_product in brand_products %}
+                    {% for collection_product in collection.products %}
+                      {% if brand_product.id == collection_product.id %}
+                        {% assign should_display_brand = true %}
+                        {% break %}
+                      {% endif %}
+                    {% endfor %}
+                    
+                    {% if should_display_brand %}
+                      {% break %}
+                    {% endif %}
+                  {% endfor %}
+                  
+                  {% if should_display_brand %}
+                    {% assign brands_to_display = brands_to_display | plus: 1 %}
+                    <div class="brand__container">
+                      <div class="brand__container--inner">
+                        <a href="{{ shop.url }}/pages/{{ brand.system.handle }}">
+                          <image-element>
+                            <img
+                              src="{{ brand.hauptbild | image_url }}&amp;width=2400"
+                              alt="{{ brand.markenname }}"
+                              srcset="{{ brand.hauptbild | image_url }}&amp;width=352 352w, {{ brand.hauptbild | image_url }}&amp;width=832 832w, {{ brand.hauptbild | image_url }}&amp;width=1200 1200w, {{ brand.hauptbild | image_url }}&amp;width=1920 1920w, {{ brand.hauptbild | image_url }}&amp;width=2400 2400w"
+                              width="2400"
+                              height="3055"
+                              loading="lazy"
+                              class="image-fit lazyloaded"
+                              sizes="(min-width: 769px) 25vw, 50vw"
+                            >
+                          </image-element>
+                          <div class="brand__title">
+                            <h3>
+                              {{ brand.markenname }}
+                            </h3>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  {% endif %}
+                {% endfor %}
+                
+                {% if brands_to_display == 0 %}
+                  <div class="no-brands-message">
+                    <p>{{ 'collections.general.no_brands_in_collection' | t }}</p>
+                  </div>
+                {% endif %}
+              </div>
+            </div>
           </div>
         </div>
       {%- endcase -%}
@@ -223,41 +253,8 @@
     },
     {
       "type": "product_grid",
-      "name": "t:sections.main-collection.blocks.products.name",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "select",
-          "id": "collection_subnav_style",
-          "label": "t:sections.main-collection.blocks.products.settings.collection_subnav_style.label",
-          "default": "inline",
-          "options": [
-            {
-              "value": "none",
-              "label": "t:sections.main-collection.blocks.products.settings.collection_subnav_style.options.none.label"
-            },
-            {
-              "value": "inline",
-              "label": "t:sections.main-collection.blocks.products.settings.collection_subnav_style.options.inline.label"
-            }
-          ]
-        },
-        {
-          "type": "range",
-          "id": "per_row",
-          "label": "t:sections.main-collection.blocks.products.settings.per_row.label",
-          "default": 4,
-          "min": 1,
-          "max": 5,
-          "step": 1
-        },
-        {
-          "type": "checkbox",
-          "id": "mobile_flush_grid",
-          "label": "t:sections.main-collection.blocks.products.settings.mobile_flush_grid.label",
-          "default": false
-        }
-      ]
+      "name": "t:sections.main-collection.blocks.brands.name",
+      "limit": 1
     }
   ]
 }

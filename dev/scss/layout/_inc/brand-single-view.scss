@@ -86,9 +86,13 @@
 					a {
 						display: inline-block;
 						padding: $padding-small $padding-medium;
+						margin: $margin-none $margin-small;
 						@include border-radius(6px, 6px, 6px, 6px);
 						border: 1px solid $base-grey-light;
 						font-weight: bold;
+						@include screen(med) {
+							margin: $margin-small $margin-none;
+						}
 						&:hover {
 							border: 1px solid $base-black;
 							@include transition(all .3s ease);
@@ -101,7 +105,7 @@
 			display: block;
 			width: 100%;
 			padding: $padding-large;
-			margin: $margin-large $margin-none;
+			margin: $margin-large $margin-none $margin-none $margin-none;
 			border: 1px solid $base-grey-light;
 			text-align: center;
 			@include border-radius(6px, 6px, 6px, 6px);
@@ -110,6 +114,20 @@
 				span {
 					font-weight: bold;
 				}
+			}
+		}
+		#brand__container--order-note {
+			display: block;
+			width: 100%;
+			padding: $padding-small;
+			margin: $margin-small $margin-none $margin-large $margin-none;
+			text-align: center;
+			@include border-radius(6px, 6px, 6px, 6px);
+			h1, h2, h3, h4, h5, h6 {
+				margin: $margin-none;
+				font-size: $font-size-medium;
+				font-style: italic;
+				color: $base-grey;
 			}
 		}
 		#brand__container--products {

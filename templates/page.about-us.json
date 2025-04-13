@@ -1,10 +1,18 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "main-page",
       "disabled": true,
-      "settings": {
-      }
+      "settings": {}
     },
     "bb13be2e-bb4b-454e-ad94-09fd19a6c7be": {
       "type": "rich-text",
@@ -19,7 +27,7 @@
           "type": "text",
           "settings": {
             "enlarge_text": true,
-            "text": "<p>MAIZON is a new digital<br\/>platform dedicated to seekers of true luxury – those lovers of excellence who<br\/>live to curate every aspect of their world.<\/p><p>The mindful luxury<br\/>consumer knows that less is more, and seeks out only those rare items that they<br\/>can truly fall in love with – distinctive pieces that support modern<br\/>craftsmanship, and select items to treasure from niche brands destined for<br\/>greatness. <\/p><p>MAIZON complements<br\/>industry-leading stores with genuinely outstanding items in the categories of<br\/>homeware, jewellery, beauty, lifestyle, and more.<\/p><p>Having spent over 20<br\/>years at the cutting-edge of fashion and e-commerce, we have nurtured<br\/>longstanding relationships with global clients and suppliers who share our<br\/>unique vision – enabling us to create a market-leading b2b business designed to<br\/>both elevate and inspire.<\/p><p>We are keen to find<br\/>out your desires and dreams, so that we can grow this into a successful opportunity<br\/>together – one that spearheads sophistication, and presents the very best in<br\/>everything.<\/p><p>Let’s curate …<\/p>"
+            "text": "<p>MAIZON is a new digital<br/>platform dedicated to seekers of true luxury – those lovers of excellence who<br/>live to curate every aspect of their world.</p><p>The mindful luxury<br/>consumer knows that less is more, and seeks out only those rare items that they<br/>can truly fall in love with – distinctive pieces that support modern<br/>craftsmanship, and select items to treasure from niche brands destined for<br/>greatness. </p><p>MAIZON complements<br/>industry-leading stores with genuinely outstanding items in the categories of<br/>homeware, jewellery, beauty, lifestyle, and more.</p><p>Having spent over 20<br/>years at the cutting-edge of fashion and e-commerce, we have nurtured<br/>longstanding relationships with global clients and suppliers who share our<br/>unique vision – enabling us to create a market-leading b2b business designed to<br/>both elevate and inspire.</p><p>We are keen to find<br/>out your desires and dreams, so that we can grow this into a successful opportunity<br/>together – one that spearheads sophistication, and presents the very best in<br/>everything.</p><p>Let’s curate …</p>"
           }
         }
       },

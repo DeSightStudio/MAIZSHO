@@ -33,6 +33,25 @@
 			}
 		}	
 	}
+	#customer_login {
+		.regButton {
+			margin: 0px;
+			a {
+				padding: $padding-small $padding-medium !important;
+				background-color: $base-black !important;
+				color: $base-white !important;
+				letter-spacing: unset;
+				border: 0px !important;
+				@include border-radius(0px, 0px, 0px, 0px);
+				@include box-shadow(0, 13px, 43px, rgba(37, 46, 89, .05));
+				@include transition(all .3s ease);
+				&:hover {
+					background: $base-black-light !important;
+					color: $base-white !important;
+				}
+			}
+		}
+	}
 	#CustomerLoginForm {
 		
 	}
