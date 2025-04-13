@@ -2314,6 +2314,10 @@
             "title_size": {
               "label": "Größe des Header-Texts"
             },
+            "title_color": {
+              "label": "Farbe der Überschrift",
+              "info": "Leer lassen für Standardfarbe"
+            },
             "subheading": {
               "label": "Unter-Überschrift"
             },
