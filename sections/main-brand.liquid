@@ -15,6 +15,13 @@
         <h4>Minimum order value at {{ page.metafields.reference.brand.value.markenname.value }}: <span>{{ page.metafields.reference.brand.value.mindestbestellwert.value }}</span></h4>
       </div>
       {%- endif -%}
+      <div id="brand__container--order-note">
+      {%- if page.metafields.reference.brand.value.bestellhinweis.value == blank -%}
+        <h3>Please note, your order must be placed by Brand</h3>
+      {%- else -%}
+        <h3>{{ page.metafields.reference.brand.value.bestellhinweis.value }}</h3>
+      {%- endif -%}
+    </div>
       <div id="brand__description">
         <h2>About us</h2>
         <p>
@@ -22,7 +29,51 @@
         </p>
         {%- if page.metafields.reference.brand.value.weiterfuhrende_informationen_pdf.value != blank -%}
         <div class="brand__description__pdf">
-          <a href="https://{{ page.metafields.reference.brand.value.weiterfuhrende_informationen_pdf.value.url }}" target="_blank" title="Further information about {{ page.metafields.reference.brand.value.markenname.value }}">Further information about {{ page.metafields.reference.brand.value.markenname.value }} (PDF)</a>
+          <a href="https://{{ page.metafields.reference.brand.value.weiterfuhrende_informationen_pdf.value.url }}" target="_blank" title="Further information about {{ page.metafields.reference.brand.value.markenname.value }}" 
+          {% if page.metafields.reference.brand.value.background-color_button-first.value != blank %}
+            {% assign color = page.metafields.reference.brand.value.background-color_button-first.value | downcase %}
+            style="background-color: {{ page.metafields.reference.brand.value.background-color_button-first.value }};
+            {% if color contains 'dark' or color contains 'dunkel' or color contains 'schwarz' or color contains 'black' or color contains '#000' or color contains '#00' or color contains '#111' or color contains '#222' or color contains '#333' or color contains '#444' %}
+              color: white;
+            {% endif %}"
+          {% endif %} 
+          >Further information about {{ page.metafields.reference.brand.value.markenname.value }} (PDF)</a>
+          
+          {%- if page.metafields.reference.brand.value.additional_pdf.value != blank -%}
+          <a href="https://{{ page.metafields.reference.brand.value.additional_pdf.value.url }}" target="_blank"
+          {% if page.metafields.reference.brand.value.background-color_button-second.value != blank %}
+            {% assign color = page.metafields.reference.brand.value.background-color_button-second.value | downcase %}
+            style="background-color: {{ page.metafields.reference.brand.value.background-color_button-second.value }};
+            {% if color contains 'dark' or color contains 'dunkel' or color contains 'schwarz' or color contains 'black' or color contains '#000' or color contains '#00' or color contains '#111' or color contains '#222' or color contains '#333' or color contains '#444' %}
+              color: white;
+            {% endif %}"
+          {% endif %}
+          >
+            {%- if page.metafields.reference.brand.value.additional_pdf_label.value != blank -%}
+              {{ page.metafields.reference.brand.value.additional_pdf_label.value }}
+            {%- else -%}
+              Additional information (PDF)
+            {%- endif -%}
+          </a>
+          {%- endif -%}
+          
+          {%- if page.metafields.reference.brand.value.additional_url.value != blank -%}
+          <a href="{{ page.metafields.reference.brand.value.additional_url.value }}" target="_blank"
+          {% if page.metafields.reference.brand.value.background-color_button-third.value != blank %}
+            {% assign color = page.metafields.reference.brand.value.background-color_button-third.value | downcase %}
+            style="background-color: {{ page.metafields.reference.brand.value.background-color_button-third.value }};
+            {% if color contains 'dark' or color contains 'dunkel' or color contains 'schwarz' or color contains 'black' or color contains '#000' or color contains '#00' or color contains '#111' or color contains '#222' or color contains '#333' or color contains '#444' %}
+              color: white;
+            {% endif %}"
+          {% endif %}
+          >
+            {%- if page.metafields.reference.brand.value.additional_url_label.value != blank -%}
+              {{ page.metafields.reference.brand.value.additional_url_label.value }}
+            {%- else -%}
+              Visit website
+            {%- endif -%}
+          </a>
+          {%- endif -%}
         </div>
         {%- endif -%}
       </div>
@@ -65,7 +116,6 @@
         {% endfor %}
       {% endpaginate %}
       </div>
-    </div>
     </div>
     <div id="brand__container--footer">
       <div id="brand__footer--inner">
