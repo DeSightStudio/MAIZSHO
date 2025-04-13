@@ -82,37 +82,73 @@
       <h2>Products from {{ page.metafields.reference.brand.value.markenname.value }}</h2>
       <div id="brand__container--products--inner">
       {% assign currentUser = customer %}
-      {% assign products = page.metafields.reference.brand.value.produkte_der_marke.value | offset:0 %}
+      {% assign products = page.metafields.reference.brand.value.produkte_der_marke.value %}
       {% assign userTags = currentUser.tags %}
-      {% assign displayedProducts = '' %} <!-- Neue Variable für bereits angezeigte Produkte -->
+      {% assign displayedProducts = '' %}
+      
       {% paginate products by 250 %}
+        {% comment %}Zuerst angeheftete Produkte anzeigen{% endcomment %}
         {% for product in products %}
-          {% assign productDisplayed = false %}
-          {% for tag in userTags %}
-          {% if product.tags contains tag and productDisplayed == false %}
-            {% assign productDisplayed = true %}
-            {% assign displayedProducts = displayedProducts | append: product.handle | append: ',' %}
-            <!-- Produkt-Container -->
-            <div class="brand__product--container">
-            <a href="{{ product.url }}" title="{{ product.title }}" class="brand__product__url">
-              <div class="brand__product--container__image">
-              <img src="{{ product.featured_image | image_url }}" alt="{{ product.title }}" class="product__main-image" />
-              </div>
-              <div class="brand__product--container__headline">
-              <h3>
-                {{ product.title }}
-              </h3>
-              </div>
-              <div class="brand__product--container__price">
-              <p>
-                {{ product.price | money }}
-              </p>
-              </div>
-            </a>
-            </div>
-            <!-- Ende Produkt-Container -->
+          {% if product.metafields.custom.pin_product == true %}
+            {% assign productDisplayed = false %}
+            {% for tag in userTags %}
+              {% if product.tags contains tag and productDisplayed == false %}
+                {% assign productDisplayed = true %}
+                {% assign displayedProducts = displayedProducts | append: product.handle | append: ',' %}
+                <!-- Angeheftetes Produkt-Container -->
+                <div class="brand__product--container pinned-product">
+                  <a href="{{ product.url }}" title="{{ product.title }}" class="brand__product__url">
+                    <div class="brand__product--container__image">
+                      <img src="{{ product.featured_image | image_url }}" alt="{{ product.title }}" class="product__main-image" />
+                    </div>
+                    <div class="brand__product--container__headline">
+                      <h3>
+                        {{ product.title }}
+                      </h3>
+                    </div>
+                    <div class="brand__product--container__price">
+                      <p>
+                        {{ product.price | money }}
+                      </p>
+                    </div>
+                  </a>
+                </div>
+                <!-- Ende angeheftetes Produkt-Container -->
+              {% endif %}
+            {% endfor %}
           {% endif %}
-          {% endfor %}
+        {% endfor %}
+        
+        {% comment %}Dann nicht angeheftete Produkte anzeigen{% endcomment %}
+        {% for product in products %}
+          {% if product.metafields.custom.pin_product != true %}
+            {% assign productDisplayed = false %}
+            {% for tag in userTags %}
+              {% if product.tags contains tag and productDisplayed == false %}
+                {% assign productDisplayed = true %}
+                {% assign displayedProducts = displayedProducts | append: product.handle | append: ',' %}
+                <!-- Nicht angeheftetes Produkt-Container -->
+                <div class="brand__product--container">
+                  <a href="{{ product.url }}" title="{{ product.title }}" class="brand__product__url">
+                    <div class="brand__product--container__image">
+                      <img src="{{ product.featured_image | image_url }}" alt="{{ product.title }}" class="product__main-image" />
+                    </div>
+                    <div class="brand__product--container__headline">
+                      <h3>
+                        {{ product.title }}
+                      </h3>
+                    </div>
+                    <div class="brand__product--container__price">
+                      <p>
+                        {{ product.price | money }}
+                      </p>
+                    </div>
+                  </a>
+                </div>
+                <!-- Ende nicht angeheftetes Produkt-Container -->
+              {% endif %}
+            {% endfor %}
+          {% endif %}
         {% endfor %}
       {% endpaginate %}
       </div>
