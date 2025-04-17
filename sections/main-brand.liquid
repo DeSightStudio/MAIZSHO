@@ -21,16 +21,16 @@
         </div>
         <div id="brand__order-note-inner__delivery">
           <h4>Delivery</h4>
-          {%- if page.metafields.reference.brand.value.lieferinformationen.value != blank -%}
-            <p>{{ page.metafields.reference.brand.value.lieferinformationen.value }}</p>
+          {%- if page.metafields.reference.brand.value.lieferhinweise.value != blank -%}
+            <p>{{ page.metafields.reference.brand.value.lieferhinweise.value }}</p>
           {%- else -%}
             <p>No delivery information</p>
           {%- endif -%}
         </div>
         <div id="brand__order-note-inner__payment">
           <h4>Payment</h4>
-          {%- if page.metafields.reference.brand.value.zahlungsinformationen.value != blank -%}
-            <p>{{ page.metafields.reference.brand.value.zahlungsinformationen.value }}</p>
+          {%- if page.metafields.reference.brand.value.zahlungshinweise.value != blank -%}
+            <p>{{ page.metafields.reference.brand.value.zahlungshinweise.value }}</p>
           {%- else -%}
             <p>No payment information</p>
           {%- endif -%}
