@@ -2330,7 +2330,7 @@
             },
             "title_color": {
               "label": "Heading color",
-              "info": "Leave blank for default color"
+              "info": "Only applies when over image"
             },
             "subheading": {
               "label": "Subheading"
@@ -2339,7 +2339,7 @@
               "label": "Slide link"
             },
             "link_text": {
-              "label": "Slide link text"
+              "label": "Link text"
             },
             "text_align": {
               "label": "Text alignment",
@@ -2372,40 +2372,42 @@
             },
             "overlay_opacity": {
               "label": "Text protection",
-              "info": "Darkens your image to ensure your text is readable"
+              "info": "Darkens your image to ensure text is readable"
             },
-            "focal_point": {
-              "label": "Image focal point",
-              "info": "Used to keep the subject of your photo in view.",
+            "button_style": {
+              "label": "Button style",
               "options": {
-                "20_0": {
-                  "label": "Top left"
+                "secondary": {
+                  "label": "Secondary"
                 },
-                "top_center": {
-                  "label": "Top center"
-                },
-                "80_0": {
-                  "label": "Top right"
-                },
-                "20_50": {
-                  "label": "Left"
-                },
-                "center_center": {
-                  "label": "Center"
-                },
-                "80_50": {
-                  "label": "Right"
-                },
-                "20_100": {
-                  "label": "Bottom left"
-                },
-                "bottom_center": {
-                  "label": "Bottom center"
-                },
-                "80_100": {
-                  "label": "Bottom right"
+                "inverse": {
+                  "label": "Inverse"
                 }
               }
+            },
+            "button_color": {
+              "label": "Button color",
+              "info": "Background color of the button"
+            },
+            "button_text_color": {
+              "label": "Button text color",
+              "info": "Text color of the button"
+            },
+            "button_border_color": {
+              "label": "Button border color",
+              "info": "Border color of the button"
+            },
+            "button_hover_color": {
+              "label": "Button hover color",
+              "info": "Background color when hovering with the mouse"
+            },
+            "button_hover_text_color": {
+              "label": "Button hover text color",
+              "info": "Text color when hovering with the mouse"
+            },
+            "button_hover_border_color": {
+              "label": "Button hover border color",
+              "info": "Border color when hovering with the mouse"
             }
           }
         }
@@ -2907,6 +2909,49 @@
       "presets": {
         "countdown": {
           "name": "Countdown"
+        }
+      }
+    },
+    "slideshow": {
+      "blocks": {
+        "slide": {
+          "settings": {
+            "button_style": {
+              "label": "Button style",
+              "options": {
+                "secondary": {
+                  "label": "Secondary"
+                },
+                "inverse": {
+                  "label": "Inverse"
+                }
+              }
+            },
+            "button_color": {
+              "label": "Button color",
+              "info": "Background color of the button"
+            },
+            "button_text_color": {
+              "label": "Button text color",
+              "info": "Text color of the button"
+            },
+            "button_border_color": {
+              "label": "Button border color",
+              "info": "Border color of the button"
+            },
+            "button_hover_color": {
+              "label": "Button hover color",
+              "info": "Background color when hovering with the mouse"
+            },
+            "button_hover_text_color": {
+              "label": "Button hover text color",
+              "info": "Text color when hovering with the mouse"
+            },
+            "button_hover_border_color": {
+              "label": "Button hover border color",
+              "info": "Border color when hovering with the mouse"
+            }
+          }
         }
       }
     }
