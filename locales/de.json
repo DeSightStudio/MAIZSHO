@@ -99,7 +99,48 @@
     },
     "slideshow": {
       "play_slideshow": "Diashow abspielen",
-      "pause_slideshow": "Pause Diashow"
+      "pause_slideshow": "Pause Diashow",
+      "blocks": {
+        "slide": {
+          "settings": {
+            "button_style": {
+              "label": "Button-Stil",
+              "options": {
+                "secondary": {
+                  "label": "Sekundär"
+                },
+                "inverse": {
+                  "label": "Invers"
+                }
+              }
+            },
+            "button_color": {
+              "label": "Button-Farbe",
+              "info": "Hintergrundfarbe des Buttons"
+            },
+            "button_text_color": {
+              "label": "Button-Textfarbe",
+              "info": "Textfarbe des Buttons"
+            },
+            "button_border_color": {
+              "label": "Button-Rahmenfarbe",
+              "info": "Rahmenfarbe des Buttons"
+            },
+            "button_hover_color": {
+              "label": "Button-Hover-Farbe",
+              "info": "Hintergrundfarbe beim Überfahren mit der Maus"
+            },
+            "button_hover_text_color": {
+              "label": "Button-Hover-Textfarbe",
+              "info": "Textfarbe beim Überfahren mit der Maus"
+            },
+            "button_hover_border_color": {
+              "label": "Button-Hover-Rahmenfarbe",
+              "info": "Rahmenfarbe beim Überfahren mit der Maus"
+            }
+          }
+        }
+      }
     }
   },
   "blogs": {
@@ -157,7 +198,8 @@
       "view_all_products_html": "zeige alle<br>{{ count }} Produkte an",
       "see_more": "Zeig mehr",
       "see_less": "Zeige weniger",
-      "no_matches": "Es tut uns leid, aber Ihre Suche nach Produkten hat keine Treffer ergeben."
+      "no_matches": "Es tut uns leid, aber Ihre Suche nach Produkten hat keine Treffer ergeben.",
+      "no_brands_in_collection": "Keine Marken in dieser Kollektion gefunden."
     },
     "sorting": {
       "title": "Sortieren"
@@ -317,7 +359,10 @@
     "product": {
       "description": "Beschreibung",
       "in_stock_label": "Auf Lager",
-      "stock_label": "{{ count }} auf Lager",
+      "stock_label": {
+        "one": "Geringer Bestand - nur noch {{ count }} Artikel",
+        "other": "Geringer Bestand - nur noch {{ count }} Artikel"
+      },
       "sold_out": "Ausverkauft",
       "unavailable": "Nicht verfügbar",
       "quantity": "Menge",
@@ -329,7 +374,7 @@
       "will_be_in_stock_after": "Wird nach dem {{ date }} auf Lager sein",
       "waiting_for_stock": "Inventar auf dem Weg",
       "view_in_space": "In Ihrem Bereich ansehen",
-      "view_in_space_label": "„Ansicht in Ihrem Raum“ lädt den Artikel im Augmented-Reality-Fenster"
+      "view_in_space_label": "Ansicht in Ihrem Raum lädt den Artikel im Augmented-Reality-Fenster"
     }
   },
   "store_availability": {
