@@ -220,7 +220,19 @@
                         {%- if block.settings.link_text != blank -%}
                           <div class="hero__link">
                             <div class="animation-cropper"><div class="animation-contents">
-                              <a href="{{ block.settings.link }}" class="btn btn--inverse">
+                              <a href="{{ block.settings.link }}" class="btn {% if block.settings.button_style == 'secondary' %}btn--secondary{% else %}btn--inverse{% endif %}"
+                                 {% if block.settings.button_color != blank or block.settings.button_text_color != blank or block.settings.button_border_color != blank %}
+                                   style="
+                                     {% if block.settings.button_color != blank %}background-color: {{ block.settings.button_color }};{% endif %}
+                                     {% if block.settings.button_text_color != blank %}color: {{ block.settings.button_text_color }};{% endif %}
+                                     {% if block.settings.button_border_color != blank %}border-color: {{ block.settings.button_border_color }};{% endif %}
+                                   "
+                                   data-hover-background="{% if block.settings.button_hover_color != blank %}{{ block.settings.button_hover_color }}{% else %}{{ block.settings.button_color }}{% endif %}"
+                                   data-hover-text="{% if block.settings.button_hover_text_color != blank %}{{ block.settings.button_hover_text_color }}{% else %}{{ block.settings.button_text_color }}{% endif %}"
+                                   data-hover-border="{% if block.settings.button_hover_border_color != blank %}{{ block.settings.button_hover_border_color }}{% else %}{{ block.settings.button_border_color }}{% endif %}"
+                                   class="custom-styled-btn"
+                                 {% endif %}
+                              >
                                 {{ block.settings.link_text }}
                               </a>
                             </div></div>
@@ -249,6 +261,28 @@
     </div>
   {%- endif -%}
 </div>
+
+<style>
+  .custom-styled-btn {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  {% for block in section.blocks %}
+    {% if block.settings.button_hover_color != blank or block.settings.button_hover_text_color != blank or block.settings.button_hover_border_color != blank %}
+    .slideshow__slide--{{ block.id }} .custom-styled-btn:hover {
+      {% if block.settings.button_hover_color != blank %}
+        background-color: {{ block.settings.button_hover_color }} !important;
+      {% endif %}
+      {% if block.settings.button_hover_text_color != blank %}
+        color: {{ block.settings.button_hover_text_color }} !important;
+      {% endif %}
+      {% if block.settings.button_hover_border_color != blank %}
+        border-color: {{ block.settings.button_hover_border_color }} !important;
+      {% endif %}
+    }
+    {% endif %}
+  {% endfor %}
+</style>
 
 {% schema %}
 {
@@ -481,6 +515,58 @@
           "max": 100,
           "step": 2,
           "unit": "%"
+        },
+        {
+          "type": "select",
+          "id": "button_style",
+          "label": "t:sections.slideshow.blocks.slide.settings.button_style.label",
+          "default": "secondary",
+          "options": [
+            {
+              "value": "secondary",
+              "label": "t:sections.slideshow.blocks.slide.settings.button_style.options.secondary.label"
+            },
+            {
+              "value": "inverse",
+              "label": "t:sections.slideshow.blocks.slide.settings.button_style.options.inverse.label"
+            }
+          ]
+        },
+        {
+          "type": "color",
+          "id": "button_color",
+          "label": "t:sections.slideshow.blocks.slide.settings.button_color.label",
+          "info": "t:sections.slideshow.blocks.slide.settings.button_color.info"
+        },
+        {
+          "type": "color",
+          "id": "button_text_color",
+          "label": "t:sections.slideshow.blocks.slide.settings.button_text_color.label",
+          "info": "t:sections.slideshow.blocks.slide.settings.button_text_color.info"
+        },
+        {
+          "type": "color",
+          "id": "button_border_color",
+          "label": "t:sections.slideshow.blocks.slide.settings.button_border_color.label",
+          "info": "t:sections.slideshow.blocks.slide.settings.button_border_color.info"
+        },
+        {
+          "type": "color",
+          "id": "button_hover_color",
+          "label": "t:sections.slideshow.blocks.slide.settings.button_hover_color.label",
+          "info": "t:sections.slideshow.blocks.slide.settings.button_hover_color.info"
+        },
+        {
+          "type": "color",
+          "id": "button_hover_text_color",
+          "label": "t:sections.slideshow.blocks.slide.settings.button_hover_text_color.label",
+          "info": "t:sections.slideshow.blocks.slide.settings.button_hover_text_color.info"
+        },
+        {
+          "type": "color",
+          "id": "button_hover_border_color",
+          "label": "t:sections.slideshow.blocks.slide.settings.button_hover_border_color.label",
+          "info": "t:sections.slideshow.blocks.slide.settings.button_hover_border_color.info"
         }
       ]
     }
