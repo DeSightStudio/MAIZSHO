@@ -101,7 +101,7 @@
 				}
 			}
 		}
-		#brand__container--order-value {
+		/*#brand__container--order-value {
 			display: block;
 			width: 100%;
 			padding: $padding-large;
@@ -115,19 +115,50 @@
 					font-weight: bold;
 				}
 			}
+		}*/
+		#brand__container--order-notes {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: center;
+			align-items: center;
+			align-content: center;
+			gap: 10px;
+			@include screen(med) {
+				display: block !important;
+			}
+			#brand__order-note-inner__minimum-order-value, 
+			#brand__order-note-inner__delivery, 
+			#brand__order-note-inner__payment {
+				flex: 1 1 33%;
+				padding: $padding-large;
+				margin: $margin-small $margin-none $margin-none $margin-none;
+				border: 1px solid $base-grey-light;
+				text-align: center;
+				@include border-radius(6px, 6px, 6px, 6px);
+				@include screen(med) {
+					flex: 1 1 100%;
+				}
+				h1, h2, h3, h4, h5, h6 {
+					margin: $margin-none $margin-none $margin-small $margin-none;
+				}
+				p {
+					margin: $margin-none !important;
+				}
+			}
 		}
 		#brand__container--order-note {
 			display: block;
 			width: 100%;
-			padding: $padding-small;
+			padding: $padding-small $padding-small $padding-medium $padding-small;
 			margin: $margin-small $margin-none $margin-large $margin-none;
 			text-align: center;
-			@include border-radius(6px, 6px, 6px, 6px);
+			border-bottom: 1px solid $base-grey-light;
 			h1, h2, h3, h4, h5, h6 {
 				margin: $margin-none;
-				font-size: $font-size-medium;
+				font-size: $font-size-large;
 				font-style: italic;
-				color: $base-grey;
+				color: $base-black;
 			}
 		}
 		#brand__container--products {

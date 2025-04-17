@@ -10,18 +10,39 @@
       <div id="brand__logo-container">
         <img src="{{ page.metafields.reference.brand.value.markenlogo.value | image_url }}" alt="{{ page.metafields.reference.brand.value.markenname.value }}" id="brand__logo-image" />
       </div>
-      {%- if page.metafields.reference.brand.value.mindestbestellwert.value != blank -%}
-      <div id="brand__container--order-value">
-        <h4>Minimum order value at {{ page.metafields.reference.brand.value.markenname.value }}: <span>{{ page.metafields.reference.brand.value.mindestbestellwert.value }}</span></h4>
+      <div id="brand__container--order-notes">
+        <div id="brand__order-note-inner__minimum-order-value">
+          <h4>Minimum Order</h4>
+          {%- if page.metafields.reference.brand.value.mindestbestellwert.value != blank -%}
+            <p>{{ page.metafields.reference.brand.value.mindestbestellwert.value }}</p>
+          {%- else -%}
+            <p>No minimum order value</p>
+          {%- endif -%}
+        </div>
+        <div id="brand__order-note-inner__delivery">
+          <h4>Delivery</h4>
+          {%- if page.metafields.reference.brand.value.lieferinformationen.value != blank -%}
+            <p>{{ page.metafields.reference.brand.value.lieferinformationen.value }}</p>
+          {%- else -%}
+            <p>No delivery information</p>
+          {%- endif -%}
+        </div>
+        <div id="brand__order-note-inner__payment">
+          <h4>Payment</h4>
+          {%- if page.metafields.reference.brand.value.zahlungsinformationen.value != blank -%}
+            <p>{{ page.metafields.reference.brand.value.zahlungsinformationen.value }}</p>
+          {%- else -%}
+            <p>No payment information</p>
+          {%- endif -%}
+        </div>
       </div>
-      {%- endif -%}
       <div id="brand__container--order-note">
-      {%- if page.metafields.reference.brand.value.bestellhinweis.value == blank -%}
-        <h3>Please note, your order must be placed by Brand</h3>
-      {%- else -%}
-        <h3>{{ page.metafields.reference.brand.value.bestellhinweis.value }}</h3>
-      {%- endif -%}
-    </div>
+        {%- if page.metafields.reference.brand.value.bestellhinweis.value == blank -%}
+          <h3>Please note, your order must be placed by Brand</h3>
+        {%- else -%}
+          <h3>{{ page.metafields.reference.brand.value.bestellhinweis.value }}</h3>
+        {%- endif -%}
+      </div>
       <div id="brand__description">
         <h2>About us</h2>
         <p>
@@ -87,16 +108,55 @@
       {% assign displayedProducts = '' %}
       
       {% paginate products by 250 %}
-        {% comment %}Zuerst angeheftete Produkte anzeigen{% endcomment %}
+        {% comment %}Zuerst angeheftete Produkte anzeigen, sortiert nach pin_product_order von 1 bis 10{% endcomment %}
+        
+        {% comment %}Gehe durch die Pin-Ordnungen 1 bis 10{% endcomment %}
+        {% for pin_order in (1..10) %}
+          {% for product in products %}
+            {% if product.metafields.custom.pin_product == true and product.metafields.custom.pin_product_order == pin_order %}
+              {% assign productDisplayed = false %}
+              {% for tag in userTags %}
+                {% if product.tags contains tag and productDisplayed == false %}
+                  {% assign productDisplayed = true %}
+                  {% assign displayedProducts = displayedProducts | append: product.handle | append: ',' %}
+                  <!-- Angeheftetes Produkt-Container (Ordnung {{ pin_order }}) -->
+                  <div class="brand__product--container pinned-product">
+                    <!--<div class="pin-order-badge">{{ pin_order }}</div>-->
+                    <a href="{{ product.url }}" title="{{ product.title }}" class="brand__product__url">
+                      <div class="brand__product--container__image">
+                        <img src="{{ product.featured_image | image_url }}" alt="{{ product.title }}" class="product__main-image" />
+                      </div>
+                      <div class="brand__product--container__headline">
+                        <h3>
+                          {{ product.title }}
+                        </h3>
+                      </div>
+                      <div class="brand__product--container__price">
+                        <p>
+                          {{ product.price | money }}
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+        
+        {% comment %}Sammle alle angepinnten Produkte ohne explizite Ordnung oder höher als 10{% endcomment %}
         {% for product in products %}
-          {% if product.metafields.custom.pin_product == true %}
+          {% if product.metafields.custom.pin_product == true and product.metafields.custom.pin_product_order == blank or product.metafields.custom.pin_product_order > 10 %}
             {% assign productDisplayed = false %}
             {% for tag in userTags %}
               {% if product.tags contains tag and productDisplayed == false %}
                 {% assign productDisplayed = true %}
                 {% assign displayedProducts = displayedProducts | append: product.handle | append: ',' %}
-                <!-- Angeheftetes Produkt-Container -->
+                <!-- Angeheftetes Produkt-Container (andere Ordnung) -->
                 <div class="brand__product--container pinned-product">
+                  {% if product.metafields.custom.pin_product_order != blank %}
+                    <div class="pin-order-badge">{{ product.metafields.custom.pin_product_order }}</div>
+                  {% endif %}
                   <a href="{{ product.url }}" title="{{ product.title }}" class="brand__product__url">
                     <div class="brand__product--container__image">
                       <img src="{{ product.featured_image | image_url }}" alt="{{ product.title }}" class="product__main-image" />
@@ -113,7 +173,6 @@
                     </div>
                   </a>
                 </div>
-                <!-- Ende angeheftetes Produkt-Container -->
               {% endif %}
             {% endfor %}
           {% endif %}
@@ -232,6 +291,31 @@
     </div>
   </div>
 </div>
+
+<style>
+  .pinned-product {
+    position: relative;
+    border: 1px solid #f0f0f0;
+  }
+  
+  .pin-order-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #333;
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 2;
+  }
+</style>
+
 {% schema %}
 {
   "name": "t:sections.main-brand.name",
