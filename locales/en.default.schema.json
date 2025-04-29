@@ -2226,6 +2226,8 @@
     },
     "slideshow": {
       "name": "Hero (optional slideshow)",
+      "play_slideshow": "Play slideshow",
+      "pause_slideshow": "Pause slideshow",
       "settings": {
         "section_height": {
           "label": "Desktop height",
@@ -2909,49 +2911,6 @@
       "presets": {
         "countdown": {
           "name": "Countdown"
-        }
-      }
-    },
-    "slideshow": {
-      "blocks": {
-        "slide": {
-          "settings": {
-            "button_style": {
-              "label": "Button style",
-              "options": {
-                "secondary": {
-                  "label": "Secondary"
-                },
-                "inverse": {
-                  "label": "Inverse"
-                }
-              }
-            },
-            "button_color": {
-              "label": "Button color",
-              "info": "Background color of the button"
-            },
-            "button_text_color": {
-              "label": "Button text color",
-              "info": "Text color of the button"
-            },
-            "button_border_color": {
-              "label": "Button border color",
-              "info": "Border color of the button"
-            },
-            "button_hover_color": {
-              "label": "Button hover color",
-              "info": "Background color when hovering with the mouse"
-            },
-            "button_hover_text_color": {
-              "label": "Button hover text color",
-              "info": "Text color when hovering with the mouse"
-            },
-            "button_hover_border_color": {
-              "label": "Button hover border color",
-              "info": "Border color when hovering with the mouse"
-            }
-          }
         }
       }
     }

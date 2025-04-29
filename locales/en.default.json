@@ -98,10 +98,83 @@
       "auth_error_html": "There was a problem authenticating your Google Maps account. Create and enable the <a href=\"https://developers.google.com/maps/documentation/javascript/get-api-key\">JavaScript API</a> and <a href=\"https://developers.google.com/maps/documentation/geocoding/get-api-key\">Geocoding API</a> permissions of your app."
     },
     "slideshow": {
+      "name": "Hero (optional slideshow)",
       "play_slideshow": "Play slideshow",
       "pause_slideshow": "Pause slideshow",
+      "settings": {
+        "section_height": {
+          "label": "Desktop height",
+          "options": {
+            "natural": {
+              "label": "Natural"
+            },
+            "450px": {
+              "label": "450px"
+            },
+            "550px": {
+              "label": "550px"
+            },
+            "650px": {
+              "label": "650px"
+            },
+            "750px": {
+              "label": "750px"
+            },
+            "100vh": {
+              "label": "Full screen"
+            }
+          }
+        },
+        "mobile_height": {
+          "label": "Mobile height",
+          "options": {
+            "auto": {
+              "label": "Auto"
+            },
+            "250px": {
+              "label": "250px"
+            },
+            "300px": {
+              "label": "300px"
+            },
+            "400px": {
+              "label": "400px"
+            },
+            "500px": {
+              "label": "500px"
+            },
+            "100vh": {
+              "label": "Full screen"
+            }
+          }
+        },
+        "parallax": {
+          "label": "Enable parallax"
+        },
+        "style": {
+          "label": "Slide navigation style",
+          "options": {
+            "minimal": {
+              "label": "Minimal"
+            },
+            "arrows": {
+              "label": "Arrows"
+            },
+            "dots": {
+              "label": "Dots"
+            }
+          }
+        },
+        "autoplay": {
+          "label": "Auto-change slides"
+        },
+        "autoplay_speed": {
+          "label": "Change images every"
+        }
+      },
       "blocks": {
         "slide": {
+          "name": "Slide",
           "settings": {
             "button_style": {
               "label": "Button style",
