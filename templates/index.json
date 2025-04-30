@@ -24,7 +24,14 @@
             "text_align": "vertical-bottom horizontal-left",
             "image": "shopify://shop_images/BRAND_BANNER_perfume_046deb71-1e0e-4d38-bd77-46bfff37e661.jpg",
             "parallax_direction": "top",
-            "overlay_opacity": 0
+            "overlay_opacity": 0,
+            "button_style": "secondary",
+            "button_color": "#ffffff",
+            "button_text_color": "#1c1d1d",
+            "button_border_color": "#1c1d1d",
+            "button_hover_color": "",
+            "button_hover_text_color": "",
+            "button_hover_border_color": ""
           }
         },
         "template--18755799744787__7f91dd29-3d2d-4514-9609-e2c3fc189721-16824072548fa1750d-0": {
@@ -39,7 +46,14 @@
             "text_align": "vertical-bottom horizontal-left",
             "image": "shopify://shop_images/Brand_1.jpg",
             "parallax_direction": "top",
-            "overlay_opacity": 20
+            "overlay_opacity": 20,
+            "button_style": "secondary",
+            "button_color": "#ffffff",
+            "button_text_color": "#1c1d1d",
+            "button_border_color": "#1c1d1d",
+            "button_hover_color": "",
+            "button_hover_text_color": "",
+            "button_hover_border_color": ""
           }
         },
         "b97fabe6-252c-4625-bec9-e0262fd308dc": {
@@ -54,7 +68,14 @@
             "text_align": "vertical-bottom horizontal-left",
             "image": "shopify://shop_images/JAOBRAND_001_dc1a5837-dcea-4911-8470-84ad5caed1e5.webp",
             "parallax_direction": "top",
-            "overlay_opacity": 0
+            "overlay_opacity": 0,
+            "button_style": "secondary",
+            "button_color": "#ffffff",
+            "button_text_color": "#1c1d1d",
+            "button_border_color": "#1c1d1d",
+            "button_hover_color": "",
+            "button_hover_text_color": "",
+            "button_hover_border_color": ""
           }
         }
       },
