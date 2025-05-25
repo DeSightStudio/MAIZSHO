@@ -1578,6 +1578,9 @@
     "main-cart": {
       "name": "Warenkorbseite"
     },
+    "main-brand": {
+      "name": "Markenseite"
+    },
     "main-collection": {
       "name": "Kategorieseite",
       "settings": {

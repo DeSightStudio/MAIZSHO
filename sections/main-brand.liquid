@@ -50,16 +50,26 @@
         </p>
         {%- if page.metafields.reference.brand.value.weiterfuhrende_informationen_pdf.value != blank -%}
         <div class="brand__description__pdf">
-          <a href="https://{{ page.metafields.reference.brand.value.weiterfuhrende_informationen_pdf.value.url }}" target="_blank" title="Further information about {{ page.metafields.reference.brand.value.markenname.value }}" 
+          <a href="https://{{ page.metafields.reference.brand.value.weiterfuhrende_informationen_pdf.value.url }}" target="_blank" title="Further information about {{ page.metafields.reference.brand.value.markenname.value }}"
           {% if page.metafields.reference.brand.value.background-color_button-first.value != blank %}
             {% assign color = page.metafields.reference.brand.value.background-color_button-first.value | downcase %}
             style="background-color: {{ page.metafields.reference.brand.value.background-color_button-first.value }};
             {% if color contains 'dark' or color contains 'dunkel' or color contains 'schwarz' or color contains 'black' or color contains '#000' or color contains '#00' or color contains '#111' or color contains '#222' or color contains '#333' or color contains '#444' %}
               color: white;
             {% endif %}"
-          {% endif %} 
-          >Further information about {{ page.metafields.reference.brand.value.markenname.value }} (PDF)</a>
-          
+          {% endif %}
+          >
+            {%- if page.metafields.reference.brand.value.weiterfuhrende_informationen_pdf_label.value != blank -%}
+              {{ page.metafields.reference.brand.value.weiterfuhrende_informationen_pdf_label.value }}
+            {%- else -%}
+              {%- if request.locale.iso_code == 'de' -%}
+                Weiterführende Informationen zu {{ page.metafields.reference.brand.value.markenname.value }} (PDF)
+              {%- else -%}
+                Further information about {{ page.metafields.reference.brand.value.markenname.value }} (PDF)
+              {%- endif -%}
+            {%- endif -%}
+          </a>
+
           {%- if page.metafields.reference.brand.value.additional_pdf.value != blank -%}
           <a href="https://{{ page.metafields.reference.brand.value.additional_pdf.value.url }}" target="_blank"
           {% if page.metafields.reference.brand.value.background-color_button-second.value != blank %}
@@ -77,7 +87,7 @@
             {%- endif -%}
           </a>
           {%- endif -%}
-          
+
           {%- if page.metafields.reference.brand.value.additional_url.value != blank -%}
           <a href="{{ page.metafields.reference.brand.value.additional_url.value }}" target="_blank"
           {% if page.metafields.reference.brand.value.background-color_button-third.value != blank %}
@@ -106,10 +116,10 @@
       {% assign products = page.metafields.reference.brand.value.produkte_der_marke.value %}
       {% assign userTags = currentUser.tags %}
       {% assign displayedProducts = '' %}
-      
+
       {% paginate products by 250 %}
         {% comment %}Zuerst angeheftete Produkte anzeigen, sortiert nach pin_product_order von 1 bis 10{% endcomment %}
-        
+
         {% comment %}Gehe durch die Pin-Ordnungen 1 bis 10{% endcomment %}
         {% for pin_order in (1..10) %}
           {% for product in products %}
@@ -143,7 +153,7 @@
             {% endif %}
           {% endfor %}
         {% endfor %}
-        
+
         {% comment %}Sammle alle angepinnten Produkte ohne explizite Ordnung oder höher als 10{% endcomment %}
         {% for product in products %}
           {% if product.metafields.custom.pin_product == true and product.metafields.custom.pin_product_order == blank or product.metafields.custom.pin_product_order > 10 %}
@@ -177,7 +187,7 @@
             {% endfor %}
           {% endif %}
         {% endfor %}
-        
+
         {% comment %}Dann nicht angeheftete Produkte anzeigen{% endcomment %}
         {% for product in products %}
           {% if product.metafields.custom.pin_product != true %}
@@ -297,7 +307,7 @@
     position: relative;
     border: 1px solid #f0f0f0;
   }
-  
+
   .pin-order-badge {
     position: absolute;
     top: 10px;

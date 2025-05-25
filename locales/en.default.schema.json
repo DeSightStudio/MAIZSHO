@@ -1582,6 +1582,9 @@
     "main-cart": {
       "name": "Cart page"
     },
+    "main-brand": {
+      "name": "Brand page"
+    },
     "main-collection": {
       "name": "Collection page",
       "settings": {
