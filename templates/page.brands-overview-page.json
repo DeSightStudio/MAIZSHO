@@ -27,13 +27,29 @@
           "type": "text",
           "settings": {
             "enlarge_text": false,
-            "text": "<p>DISCOVER OUR BRANDS</p>"
+            "text": "<p>DISCOVER OUR BRANDS</p><p>FEATURED BRANDS</p><p>A curated mix of brands designed to elevate your assortment and drive sales.</p><p>From refillable home care to everyday essentials and statement pieces — each brand brings a clear point of difference and strong retail potential.</p>"
+          }
+        },
+        "text_EXMy9D": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        },
+        "text_URPdxm": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
           }
         }
       },
       "block_order": [
         "template--19043994140947__9b06eb47-129f-4d67-a8d8-f4f4695f0fb6-16843282410aa19804-0",
-        "template--19043994140947__9b06eb47-129f-4d67-a8d8-f4f4695f0fb6-16843282410aa19804-1"
+        "template--19043994140947__9b06eb47-129f-4d67-a8d8-f4f4695f0fb6-16843282410aa19804-1",
+        "text_EXMy9D",
+        "text_URPdxm"
       ],
       "settings": {
         "align_text": "center",
