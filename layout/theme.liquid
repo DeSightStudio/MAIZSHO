@@ -104,7 +104,7 @@
 
  {% if request.path contains '/account/activate/' %}
       {% include 'activate-account' %}
-    {% elsif request.path == '/account/register' OR request.path == '/account/recover' %}
+    {% elsif request.path == '/account/register' %}
       {% include 'register-new' %}
     {% elsif request.path contains '/account/reset' %}
       {% include 'reset-password' %}
@@ -149,3 +149,14 @@
   {% endif %}
 </body>
 </html>
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% elsif request.path == '/account/register' OR request.path == '/account/recover'
+    %}"
+  to: "{% elsif request.path == '/account/register' %}"
+  position: 5599..5646
+{% endcomment %}
